@@ -1125,7 +1125,7 @@
     };
 
     /* ==========================================================================
-       3. BANCO DE QUESTÕES COMPLETO (INTEGRALIDADE DOS MODOS 1, 2 E 3)
+       3. BANCO DE QUESTÕES COMPLETO (INTEGRALIDADE DOS MODOS 1, 2, 3, 4, 5 E 6)
        ========================================================================== */
     const questionDatabase = {
       intro: [
@@ -2203,1195 +2203,839 @@
         }
       ],
       transcriptoma: [
-        {
-          q: "Todas as células de um indivíduo carregam o mesmo genoma?",
-          options: [
-            "Sim, neurônio e linfócito têm a mesma sequência de DNA, a diferença está na expressão.",
-            "Não, o genoma muda conforme o tecido.",
-            "Sim, mas apenas em células tronco.",
-            "Não, células maduras perdem trechos de DNA."
-          ],
-          answer: 0,
-          explanation: "A diferença não está no que está escrito (genoma), mas em que parte é lida, quando e quanto."
-        },
-        {
-          q: "O que caracteriza a genômica funcional?",
-          options: [
-            "Atribuir função aos elementos do genoma em escala genômica, medindo a atividade dos elementos.",
-            "Sequenciar o DNA de diferentes espécies isoladas.",
-            "Mapear estruturalmente o catálogo estático de genes.",
-            "Estudar apenas as proteínas de uma célula de cada vez."
-          ],
-          answer: 0,
-          explanation: "Mede-se atividade (quais elementos estão em uso em uma célula/condição), não a sequência estrutural estática."
-        },
-        {
-          q: "Sobre a releitura do dogma central como camadas ômicas:",
-          options: [
-            "A epigenômica e a regulação não são um andar a mais; elas atravessam e decidem o fluxo entre todas as camadas.",
-            "A epigenômica atua apenas após a síntese de proteínas.",
-            "A transcrição ocorre de forma cega, sem controle epigenético.",
-            "A metabolômica dita diretamente a sequência do genoma."
-          ],
-          answer: 0,
-          explanation: "As marcas epigenéticas e a regulação decidem se o DNA vira RNA e se o RNA vira proteína, controlando o fluxo."
-        },
-        {
-          q: "Quantos pontos de controle existem classicamente entre o DNA e a proteína ativa?",
-          options: [
-            "Nove pontos de controle, sendo os pontos 1 a 6 estudados pelo transcritoma.",
-            "Três pontos: transcrição, tradução e degradação.",
-            "Cinco pontos, e todos pertencem ao proteoma.",
-            "Dez pontos, sendo a maioria exclusividade do genoma estrutural."
-          ],
-          answer: 0,
-          explanation: "Existem 9 pontos. Do 1 ao 6 abordam desde a estrutura da cromatina até a degradação do RNA (transcriptoma)."
-        },
-        {
-          q: "Qual o método padrão atual para medir a acessibilidade da cromatina?",
-          options: [
-            "ATAC-seq, que utiliza a transposase Tn5 para cortar o DNA exposto.",
-            "ChIP-seq para detectar todas as histonas.",
-            "Microarranjo hibridizado contra sondas de RNA.",
-            "scRNA-seq com depleção ribossomal."
-          ],
-          answer: 0,
-          explanation: "O ATAC-seq insere adaptadores com a Tn5 apenas nas regiões de cromatina aberta (eucromatina), permitindo mapear os sítios expostos."
-        },
-        {
-          q: "Qual a característica dos promotores de RNA-polimerase II no genoma humano?",
-          options: [
-            "Apenas 10-15% têm TATA box; a maioria é rica em ilhas CpG e usa múltiplos sítios de início.",
-            "Todos os promotores codificantes possuem TATA box para ativação.",
-            "A TATA box inibe a ligação dos fatores gerais de transcrição.",
-            "Os fatores gerais isoladamente garantem toda a especificidade tissular."
-          ],
-          answer: 0,
-          explanation: "Diferente dos livros didáticos antigos, a TATA box é minoria. A especificidade é dada pela combinação de fatores específicos."
-        },
-        {
-          q: "O que define a lógica combinatória da regulação por fatores de transcrição?",
-          options: [
-            "Um único fator regula muitos genes, e um mesmo gene responde à combinação de vários fatores simultâneos.",
-            "Lógica linear: um fator ativa exclusivamente um único gene no genoma.",
-            "Um fator atua sempre como ativador forte, sem depender dos parceiros.",
-            "Eles substituem a Polimerase no promotor em condições de estresse."
-          ],
-          answer: 0,
-          explanation: "A especificidade vem do contexto: os parceiros co-ligados decidem se aquele fator ativará ou reprimirá aquele gene naquela célula."
-        },
-        {
-          q: "Quais eventos ocorrem de forma acoplada durante a transcrição do RNA?",
-          options: [
-            "Capping 5', Splicing e Poliadenilação 3'.",
-            "Dobramento de proteína, Tradução e Ubiquitinação.",
-            "Metilação do DNA, Acetilação e fosforilação.",
-            "Adição de promotores, Exon skipping e lise."
-          ],
-          answer: 0,
-          explanation: "O RNA nasce já sendo processado pela maquinaria que viaja acoplada ao CTD fosforilado da RNA-polimerase II."
-        },
-        {
-          q: "Splicing alternativo gera mais proteínas do que os genes anotados. Qual é o evento mais comum em humanos?",
-          options: [
-            "O \"Exon skipping\" (salto de éxon), respondendo por cerca de 40% dos eventos.",
-            "A retenção permanente de íntrons em todos os transcritos adultos.",
-            "Sítio 5' alternativo, onde o códon de parada é sempre removido.",
-            "Éxons mutuamente exclusivos que dobram o tamanho da fita do DNA."
-          ],
-          answer: 0,
-          explanation: "Mais de 90% dos genes humanos multiéxon sofrem splicing alternativo, sendo o salto de éxon (exon skipping) o mais predominante."
-        },
-        {
-          q: "Qual a relação da metilação do DNA com o corpo do gene e o promotor?",
-          options: [
-            "No promotor, associa-se a silenciamento; mas no corpo do gene, correlaciona-se com transcrição ativa.",
-            "Sempre inativa o gene, independentemente de onde ocorrer na sequência.",
-            "No corpo do gene, a metilação bloqueia a ação do ribossomo.",
-            "A metilação remove histonas da cromatina irreversivelmente."
-          ],
-          answer: 0,
-          explanation: "A metilação não é apenas \"liga/desliga\". No corpo do gene, ela previne a iniciação espúria e está ligada a transcrição ativa."
-        },
-        {
-          q: "Quais os 3 qualificadores obrigatórios para garantir a reprodutibilidade de um experimento de transcriptoma?",
-          options: [
-            "Uma amostra definida, um momento específico e uma condição clara.",
-            "Um genoma purificado, uma enzima e um sequenciador de nova geração.",
-            "RNA mensageiro, RNA ribossomal e proteínas ativas.",
-            "O alinhamento bioinformático, o heatmap e o PCA plot."
-          ],
-          answer: 0,
-          explanation: "O transcriptoma é dinâmico (muda em minutos). Sem definir onde, quando e sob que condição, a medida perde sentido e não é comparável."
-        },
-        {
-          q: "Por que a contagem em \"bulk RNA-seq\" pode ser ilusória para entender regulação?",
-          options: [
-            "Porque o tecido é uma mistura heterogênea; a média esconde que um gene pode mudar apenas em uma subpopulação celular.",
-            "Porque os algoritmos descartam todas as leituras de genes fracamente expressos.",
-            "Porque o RNA extraído do tecido inteiro degrada instantaneamente.",
-            "Porque o bulk RNA-seq apenas consegue ler a sequência do genoma do hospedeiro."
-          ],
-          answer: 0,
-          explanation: "Em bulk, a expressão é a média ponderada de milhares de células; para resolver isso, recorre-se ao scRNA-seq (célula única)."
-        },
-        {
-          q: "Qual é o problema central abordado na Genômica Funcional (Área II) em relação ao genoma?",
-          options: [
-            "Sequenciar e montar o genoma como um texto estático.",
-            "Medir a atividade dos elementos para descobrir o que a sequência genômica faz.",
-            "Calcular métricas de qualidade como N50 e BUSCO.",
-            "Descobrir a exata sequência de pares de bases das variantes alélicas."
-          ],
-          answer: 1,
-          explanation: "A Área II (Genômica Funcional) busca descobrir o que essa sequência faz usando medidas de atividade, não de sequência."
-        },
-        {
-          q: "Um neurônio, um linfócito e um hepatócito possuem morfologia e funções completamente diferentes. Qual das afirmações abaixo melhor descreve o genoma dessas três células?",
-          options: [
-            "Elas descartaram partes diferentes do genoma durante o desenvolvimento.",
-            "Elas possuem genomas diferentes que se adaptaram à função tecidual.",
-            "Todas carregam a mesma sequência de DNA.",
-            "O genoma do neurônio é maior para suportar funções complexas."
-          ],
-          answer: 2,
-          explanation: "Células radicalmente diferentes como um neurônio e um linfócito têm a mesma sequência de DNA, mantendo genomas equivalentes."
-        },
-        {
-          q: "Devido à biologia do processamento de RNA, qual entidade substituiu o 'gene' como a unidade natural de medida na transcritômica?",
-          options: [
-            "O promotor.",
-            "O éxon.",
-            "A isoforma.",
-            "O íntron."
-          ],
-          answer: 2,
-          explanation: "Com aproximadamente 14 transcritos anotados por gene codificante, o gene deixou de ser a unidade natural da medida - a isoforma é."
-        },
-        {
-          q: "A transcrição de genes depende do estado de compactação do DNA. Em qual estado a cromatina encontra-se com nucleossomos compactados, impedindo a leitura?",
-          options: [
-            "Transcrito primário.",
-            "Eucromatina.",
-            "Epigenômica.",
-            "Heterocromatina."
-          ],
-          answer: 3,
-          explanation: "A estrutura fechada onde nucleossomos estão altamente compactados impede a leitura e caracteriza a Heterocromatina."
-        },
-        {
-          q: "Na interpretação dos dados de um RNA-seq, encontrar um transcrito em alta abundância (alta contagem) comprova que o gene possui uma alta taxa de transcrição?",
-          options: [
-            "Sim, o RNA-seq mede diretamente a taxa de síntese de RNA em tempo real.",
-            "Não, o RNA-seq mede o estado estacionário, e um RNA abundante pode simplesmente ser muito estável e degradar devagar.",
-            "Sim, pois genes abundantes nunca são regulados pós-transcricionalmente.",
-            "Não, um RNA abundante indica que o fator de transcrição falhou em reprimi-lo."
-          ],
-          answer: 1,
-          explanation: "Sendo uma de suas mensagens fundamentais, um mRNA abundante pode ser um mRNA estável, e não um gene muito transcrito porque o RNA-seq mede estado estacionário, não taxa de transcrição."
-        },
-        {
-          q: "A mesma lesão (deleção na região 15q11-q13) pode gerar síndromes distintas (Prader-Willi ou Angelman). Esse fenômeno ocorre devido ao imprinting, onde a diferença fenotípica é determinada por:",
-          options: [
-            "Uma mutação de ponto não relacionada na região adjacente.",
-            "Uma diferença na marca epigenética baseada na origem parental (materna ou paterna).",
-            "Splicing alternativo diferencial do cromossomo 15.",
-            "Erros na transcrição reversa."
-          ],
-          answer: 1,
-          explanation: "A síndrome será diferente porque a marca epigenética de origem parental difere, silenciando diferentemente os alelos remanescentes dependendo se a cópia excluída era a materna ou a paterna."
-        },
-        {
-          q: "Ao se extrair RNA total de uma célula, a maior parte da massa recuperada (80-90%) pertence a qual classe genérica de RNA?",
-          options: [
-            "mRNA.",
-            "lncRNA.",
-            "rRNA.",
-            "miRNA."
-          ],
-          answer: 2,
-          explanation: "A classe ribossomal (rRNA) representa gigantescos 80-90% da massa total de RNA, apesar do foco biomédico recair sobre o modesto mRNA."
-        },
-        {
-          q: "A técnica de microarranjo (microarray) perdeu espaço para o RNA-seq. Qual das opções abaixo é a limitação mais grave do microarranjo apontada no material?",
-          options: [
-            "Ele gera dados apenas para RNA ribossomal.",
-            "Ele é consideravelmente mais lento de processar que o RNA-seq.",
-            "Ele satura muito devagar a faixa dinâmica de leitura.",
-            "Ele só mede o que já possui sonda fixa na lâmina, não descobrindo transcritos não-anotados."
-          ],
-          answer: 3,
-          explanation: "Diferente da era pós-NGS, o microarranjo só mede o que já está na lâmina – nada de novo, inviabilizando abordagens agnósticas de descoberta genômica."
-        },
-        {
-          q: "Ao se preparar bibliotecas para RNA-seq, qual métrica avaliada via Bioanalyzer indica a qualidade da amostra inicial e atua como fator limitante para todo o processo posterior?",
-          options: [
-            "Valor de RIN (idealmente >= 7).",
-            "Fator de tamanho.",
-            "Valor de RPKM.",
-            "Log2FC."
-          ],
-          answer: 0,
-          explanation: "O RNA Integrity Number (RIN) necessita alcançar valores >= 7 logo de partida, visto que a qualidade do RNA de partida limita tudo o que vem depois."
-        },
-        {
-          q: "Qual abordagem computacional (in silico) para RNA-seq atribui leituras diretamente a transcritos conhecidos e funciona entre 10 e 100 vezes mais rápido que os algoritmos posicionais clássicos?",
-          options: [
-            "Alinhamento completo com STAR.",
-            "Controle de qualidade com FastQC.",
-            "Análise de Variação Genômica.",
-            "Pseudoalinhamento (ex: Salmon, kallisto)."
-          ],
-          answer: 3,
-          explanation: "Processos como o Salmon utilizam o pseudoalinhamento, que agrupa reads a transcritos de maneira 10 a 100x mais veloz que alinhadores como o STAR."
-        },
-        {
-          q: "Na normalização de dados transcritômicos, qual medida tornou-se o padrão descritivo moderno por corrigir adequadamente primeiro o comprimento do transcrito e depois a profundidade da biblioteca?",
-          options: [
-            "CPM.",
-            "TPM.",
-            "RPKM.",
-            "GSEA."
-          ],
-          answer: 1,
-          explanation: "O TPM (Transcripts Per Million) resolve deficiências de normalização porque calcula comprimento e depois profundidade, virando o padrão descritivo primário."
-        },
-        {
-          q: "Segundo os erros clássicos de análise mencionados para testes de expressão diferencial, qual destas condutas inflará consideravelmente seus resultados falsos positivos em um teste genômico amplo?",
-          options: [
-            "Corrigir os resultados para múltiplos testes adotando metodologias de FDR.",
-            "Adicionar um termo corretivo para efeito de lote no modelo estatístico.",
-            "Utilizar o p-valor bruto (não ajustado) para determinar significância, gerando achados ao acaso.",
-            "Olhar a média base de expressão ao analisar altos valores de Log2FC."
-          ],
-          answer: 2,
-          explanation: "É crucial esquivar-se de usar p bruto em vez de p ajustado, dado que o volume massivo de testes estatísticos permite que 1.000 genes 'significativos' surgem por acaso a p<0,05 em bases imensas."
-        },
-        {
-          q: "Ao examinar um Volcano plot oriundo de análise diferencial, a correta interpretação ontológica para genes que aparecem muito no alto e nas bordas laterais do gráfico é:",
-          options: [
-            "Constituem achados que já podem ser considerados verdades biológicas absolutas.",
-            "Representam artefatos do lote de processamento.",
-            "São o fundo não-significativo das amostras bulk.",
-            "Constituem uma hipótese gerada, não o resultado final, necessitando de validação biológica."
-          ],
-          answer: 3,
-          explanation: "Um ponto elevado denota um alto limiar provável, contudo visualmente constitui estritamente uma hipótese, não um resultado, aguardando prova real via coerência ou bancada."
-        },
-        {
-          q: "Antes de interpretar testes de expressão diferencial e vias enriquecidas, qual gráfico deve ser revisado primariamente para checar se as amostras estão se separando por efeito de lote em vez de se separarem pelo grupo de tratamento?",
-          options: [
-            "Gráfico Volcano.",
-            "Heat map com agrupamento hierárquico.",
-            "PCA (Análise de Componentes Principais).",
-            "Plot MA."
-          ],
-          answer: 2,
-          explanation: "Antes de testes diferenciais, deve-se verificar o espaço PCA para validar agrupamento pelo grupo natural e detectar um possível alinhamento pelo lote de processamento."
-        },
-        {
-          q: "Por que um resultado mostrando 'gene reprimido pela metade' em amostras Bulk RNA-seq de tecido pode ser biologicamente dúbio na prática?",
-          options: [
-            "O RNA-seq bulk tem limite técnico para ler RNA reprimido.",
-            "O bulk calcula uma média ponderada; a 'repressão' pode apenas refletir que aquele gene desapareceu completamente em 50% das células analisadas, e permaneceu igual nas demais.",
-            "Expressão fracionada requer sondas artificiais de validação para ser confiável.",
-            "Os níveis de metilação cancelam a medida exata."
-          ],
-          answer: 1,
-          explanation: "O processo clássico entrega apenas a média ponderada de milhares de células, o que mascara mudanças biológicas expressivas diluídas nos tipos celulares inalterados."
-        },
-        {
-          q: "Nas metodologias de scRNA-seq (célula única), os identificadores únicos moleculares (UMIs) têm o papel primário de:",
-          options: [
-            "Conceder um código de barras para saber de qual placa a célula veio.",
-            "Permitir a contagem de cópias após a extração, inflacionando o transcritoma.",
-            "Marcar se o RNA é ribossomal ou mensageiro.",
-            "Eliminar duplicatas criadas pelo PCR, permitindo a contagem apenas de moléculas originais presentes na célula."
-          ],
-          answer: 3,
-          explanation: "A função estrita de um UMI em single-cell reside em como ele elimina duplicatas de PCR, quantificando as moléculas originais estritas no cálculo final do software."
-        },
-        {
-          q: "A Transcriptômica Espacial tenta contornar o problema da dissociação inerente ao Single-cell clássico focando fundamentalmente em preservar:",
-          options: [
-            "A informação da posição morfológica original (a região onde a célula e o RNA estavam no tecido).",
-            "A estabilidade exata dos íntrons em todas as fitas de transcrição imaturas.",
-            "Os RNAs curtos degradados pelo uso de transposase no tecido bulk.",
-            "A taxa enzimática da RNA polimerase sem uso de sondas óticas."
-          ],
-          answer: 0,
-          explanation: "O arranjo espacial foi criado para isolar a informação por REGIÃO, solucionando o gap da perda celular arquitetônica garantindo a preservação da informação de onde a célula estava no estroma do tecido."
-        },
-        {
-          q: "Sobre as ferramentas de enriquecimento funcional aplicadas aos resultados de expressão diferencial, qual é uma diferença metodológica fundamental apontada entre os testes ORA (Sobre-representação) e GSEA (Enriquecimento de Conjuntos de Genes)?",
-          options: [
-            "ORA exige o ranking completo dos genes, enquanto o GSEA corta a lista por FDR antes da análise.",
-            "GSEA detecta deslocamentos coordenados sutis usando o ranking completo sem corte prévio, enquanto ORA aplica um teste hipergeométrico que depende de uma lista previamente cortada (por p-valor e log2FC).",
-            "Ambos os métodos dispensam a declaração de um background apropriado, focando apenas nos genes super-expressos.",
-            "GSEA é restrito a genes do ciclo celular, enquanto ORA é viesado para conjuntos ribossomais."
-          ],
-          answer: 1,
-          explanation: "O material aponta o ORA baseando-se em uma lista já cortada por p e log2FC aplicando o teste hipergeométrico contra um background, em oposição ao GSEA que usa o ranking completo, sem corte prévio capturando mudanças coordenadas."
-        },
-        {
-          q: "Ao validar os resultados de um RNA-seq usando qRT-PCR (seguindo as diretrizes MIQE), por que a adoção da prática clássica de usar isoladamente genes como GAPDH ou ACTB como controle de normalização pode arruinar o experimento?",
-          options: [
-            "Porque as químicas de qRT-PCR baseadas em corante intercalante não conseguem se ligar eficientemente ao cDNA da actina.",
-            "Porque não existe gene housekeeping universal, e a expressão de GAPDH e ACTB pode variar amplamente dependendo da hipóxia, fase do ciclo ou estado de diferenciação da amostra.",
-            "Porque as diretrizes MIQE proíbem o uso de genes estruturais em análises baseadas em sondas específicas.",
-            "Porque a transcrição reversa degrada preferencialmente mRNAs muito abundantes."
-          ],
-          answer: 1,
-          explanation: "A premissa central é que não existe gene housekeeping universal, alertando especificamente que o GAPDH e ACTB variam com hipóxia, ciclo e diferenciação, forçando a validação de normalizadores locais."
-        },
-        {
-          q: "Pacotes estatísticos como DESeq2 e edgeR são o padrão-ouro para o teste de expressão diferencial. Para evitar a inflação drástica da taxa de falsos positivos, qual tipo de dado nunca deve ser fornecido como entrada nesses programas?",
-          options: [
-            "Matrizes com fator de tamanho ajustado (TMM).",
-            "Matriz de contagens discretas oriundas do alinhamento completo.",
-            "Contagens brutas superdispersas modeladas em binomial negativa.",
-            "Valores previamente normalizados pelo comprimento e profundidade, como TPM, RPKM ou FPKM, pois quebram o modelo de variância estatística desenhado para os dados puros."
-          ],
-          answer: 3,
-          explanation: "É uma regra analítica explícita: Nunca rode DESeq2 ou edgeR sobre TPM ou FPKM, pois as ferramentas modelam a variância das contagens brutas e aceitar o valor normalizado quebra o modelo e infla a taxa de falsos positivos."
-        },
-        {
-          q: "O protocolo de extração de RNA dita as classes de moléculas que serão capturadas e enxergadas na biblioteca. Se o objetivo do pesquisador é quantificar transcritos longos não-codificantes (lncRNAs) ou analisar amostras com índice de degradação parcial, qual estratégia deve ser utilizada?",
-          options: [
-            "Depleção de rRNA (Ribo-depletion).",
-            "Seleção direta por cauda poli(A).",
-            "Northern blot reverso.",
-            "Clonagem de transcritos primários in vitro."
-          ],
-          answer: 0,
-          explanation: "Embora o método poli(A) capture efetivamente os mRNAs maduros de forma econômica, a depleção de rRNA é a escolha técnica necessária porque preserva lncRNA, RNA não poliadenilado e amostras degradadas."
-        },
-        {
-          q: "Durante as etapas in vitro de construção da biblioteca de RNA-seq, duas escolhas técnicas específicas geram artefatos permanentes que necessitam de métricas de controle de qualidade (QC) próprias. O excesso de ciclos de amplificação e a etapa de transcrição reversa com random primers causam, respectivamente:",
-          options: [
-            "Falhas de poliadenilação e deleção das pontas 5' do transcrito.",
-            "Splicing aberrante e degradação antecipada do RIN no Bioanalyzer.",
-            "Duplicatas de PCR e viés de composição (associado ao conteúdo GC).",
-            "Formação imprecisa de RNA circular (circRNA) e bloqueio da transposase Tn5."
-          ],
-          answer: 2,
-          explanation: "O fluxo de bancada carrega duas cicatrizes inseparáveis do método: duplicatas de PCR por excesso de ciclos e viés de composição promovido pelo random priming e conteúdo GC."
-        },
-        {
-          q: "Na transcriptômica de célula única (scRNA-seq), consórcios internacionais volumosos como o Human Cell Atlas mudaram fundamentalmente o modo como novos pesquisadores processam seus dados experimentais ao fornecerem:",
-          options: [
-            "Algoritmos fechados capazes de isolar mecanicamente o citoplasma sem necessidade de dissociação enzimática.",
-            "Bibliotecas padronizadas que eliminam as etapas de sequenciamento de leitura curta em favor de leituras em tempo real.",
-            "Mapas espaciais independentes do UMAP que resolvem falhas de pseudotempo genético em organoides vegetais.",
-            "Referências estabelecidas de tipos celulares (atlas de tecidos saudáveis), permitindo que a anotação dos agrupamentos (clusters) recém-descobertos seja feita por projeção direta sobre a referência pública."
-          ],
-          answer: 3,
-          explanation: "Os mega-bancos como o Human Cell Atlas transformam o campo prático ao garantir que as referências de tipo celular passam a existir, habilitando que os novos tipos celulares sejam anotados por projeção sobre o atlas."
-        }
+    {
+      q: "Um neurônio e um linfócito do mesmo indivíduo possuem o mesmo genoma, mas morfologias e funções distintas. A explicação central para essa diferença reside no fato de que:",
+      options: [
+        "O genoma de neurônios sofre recombinações somáticas irreversíveis em quase todos os locos gênicos.",
+        "O transcritoma é dinâmico e define que partes do genoma são lidas, quando e em que quantidade.",
+        "Linfócitos perdem grande parte dos seus genes codificantes durante a diferenciação celular.",
+        "A taxa de mutação pontual no DNA de linfócitos é substancialmente superior à de neurônios."
       ],
-      proteomica: [
-        /* ================= 11 QUESTÕES ORIGINAIS ================= */
-        {
-          q: "Qual o papel fundamental da proteômica frente ao transcritoma?",
-          options: [
-            "Medir a realização em vez da intenção: proteínas são os executores da função, e sua abundância correlaciona-se apenas moderadamente com o mRNA.",
-            "Provar que a quantidade de mRNA é sempre idêntica à quantidade de proteína ativa.",
-            "Mapear a fita dupla do DNA para prever a estabilidade dos éxons.",
-            "Contar apenas as chaperonas responsáveis pelo enovelamento no núcleo."
-          ],
-          answer: 0,
-          explanation: "A correlação (RNA vs Proteína) é moderada devido a viés de tradução, meia-vida, sequestro e modificações pós-traducionais."
-        },
-        {
-          q: "O que caracteriza a estrutura química dos aminoácidos usados pelas células?",
-          options: [
-            "Eles possuem um carbono alfa quiral ligado a quatro grupos distintos, aparecendo apenas na forma L (com exceção da glicina, aquiral).",
-            "Possuem apenas cadeias laterais ácidas e sempre adotam a conformação D na natureza.",
-            "São formados por bases nitrogenadas empilhadas por pontes de hidrogênio.",
-            "O carbono central é inerte, tornando impossível a formação de polímeros longos."
-          ],
-          answer: 0,
-          explanation: "Os 20 aminoácidos têm estereoquímica L. A glicina é a única exceção aquiral pois tem dois hidrogênios no carbono alfa."
-        },
-        {
-          q: "O que define o Ponto Isoelétrico (pI) de uma proteína?",
-          options: [
-            "O pH em que a carga elétrica líquida da proteína é zero (forma zwitteriônica máxima).",
-            "A temperatura limite onde a proteína perde permanentemente seu dobramento.",
-            "O comprimento exato em nanômetros da sua estrutura primária.",
-            "O ponto onde a tripsina consegue clivar a cadeia sem restrições."
-          ],
-          answer: 0,
-          explanation: "Abaixo do pI a proteína fica positiva (cátion), acima fica negativa (ânion). Esse princípio é a base da focalização isoelétrica (1D no gel 2D)."
-        },
-        {
-          q: "Por que o dobramento da cadeia proteica é um problema computacional minimamente tratável?",
-          options: [
-            "Devido à ligação peptídica, que possui caráter parcial de dupla ligação, sendo plana e rígida e restringindo o giro.",
-            "Porque as interações hidrofóbicas atraem aleatoriamente todos os átomos para o centro.",
-            "Devido à total liberdade de rotação de todos os ângulos do esqueleto covalente.",
-            "Porque a tripsina corta a proteína em tamanhos idênticos previsíveis."
-          ],
-          answer: 0,
-          explanation: "A planaridade e rigidez da ligação peptídica reduzem imensamente o espaço de conformações possíveis da cadeia."
-        },
-        {
-          q: "O que é o efeito 'moonlighting' em proteínas?",
-          options: [
-            "Ocorre quando a mesma cadeia polipeptídica muda de função ao mudar de parceiro, compartimento celular ou modificação.",
-            "A destruição total de uma proteína pelas enzimas da lua do proteassoma.",
-            "O processo exclusivo de iluminação de proteínas na fluorescência do Western Blot.",
-            "Quando o RNA pula o ribossomo e executa a função catalítica sozinho."
-          ],
-          answer: 0,
-          explanation: "Uma proteína não está presa a um 'destino' ou função única. Parceiros, localização e PTMs mudam o papel dela dinamicamente."
-        },
-        {
-          q: "Por que o proteoma humano excede brutalmente o número de genes codificantes anotados (~19.400)?",
-          options: [
-            "Devido ao splicing alternativo, processamento proteolítico e aos milhões de sítios de modificações pós-traducionais (PTMs) possíveis.",
-            "Porque o genoma esconde centenas de milhares de genes em regiões teloméricas mortas.",
-            "Porque ribossomos geram sequências aleatórias de aminoácidos sem molde de RNA.",
-            "Porque a RNA polimerase introduz mutações propositais durante o alongamento."
-          ],
-          answer: 0,
-          explanation: "Um gene não faz uma proteína, ele faz uma família de 'proteoformas'. Só de sítios de modificações curados, há mais de 2,7 milhões."
-        },
-        {
-          q: "Na técnica de Espectrometria de Massas, o que o analisador mede de forma primária e direta?",
-          options: [
-            "Mede unicamente a grandeza física da razão massa/carga (m/z) dos íons.",
-            "A sequência linear de nucleotídeos da proteína alvo.",
-            "A estrutura cristalina tridimensional exata e a cor das cadeias polares.",
-            "A quantidade de ligações peptídicas que resistiram ao pulso de laser."
-          ],
-          answer: 0,
-          explanation: "Tudo em proteômica MS (identidade, quantidade, sequência) é uma inferência estatística computacional baseada puramente nos gráficos de m/z."
-        },
-        {
-          q: "Qual o principal 'gargalo' ou desafio analítico na proteômica de misturas complexas, como o plasma sanguíneo?",
-          options: [
-            "A gigantesca faixa dinâmica (>10 ordens de grandeza), onde proteínas hiper-abundantes como a albumina mascaram os alvos raros.",
-            "A ausência total de proteases para picotar a amostra.",
-            "A carga elétrica das proteínas do sangue desarmar o espectrômetro.",
-            "O fato das proteínas serem invisíveis sob a luz ultravioleta do laser."
-          ],
-          answer: 0,
-          explanation: "A albumina e imunoglobulinas compõem até 75% da massa do plasma. Marcadores tumorais importantes estão milhares de vezes abaixo, sumindo no ruído."
-        },
-        {
-          q: "Como atua a Eletroforese Bidimensional (2D-GE)?",
-          options: [
-            "Aplica duas propriedades ortogonais: separa primeiro pelo Ponto Isoelétrico (IEF) e depois pela Massa Molecular (SDS-PAGE).",
-            "Isola proteínas primeiro pela densidade no ultracentrifugador e depois por afinidade magnética.",
-            "Separa primeiro pela carga positiva pura e depois as digere com enzimas no próprio gel.",
-            "Filtra os peptídeos por espectrometria de massa antes de aplicar o gel linear."
-          ],
-          answer: 0,
-          explanation: "A combinação do IEF (pI) com o SDS-PAGE (massa) cria um grid visual poderoso onde cada mancha revela uma proteoforma distinta."
-        },
-        {
-          q: "O que descreve a abordagem Bottom-up (Shotgun) dominante na proteômica?",
-          options: [
-            "Digerir as proteínas complexas com tripsina gerando peptídeos (7-25 resíduos) mais fáceis de analisar no espectrômetro, reconstruindo o resultado por inferência computacional.",
-            "Analisar as proteínas intactas colossais sem nenhuma quebra, mantendo as isoformas originais completas no vácuo (Top-down).",
-            "Hibridizar a amostra em lâminas (microarranjos) contendo milhões de anticorpos fluorescentes.",
-            "Sequenciar diretamente o núcleo da célula com nanotecnologia e ignorar as proteínas citoplasmáticas."
-          ],
-          answer: 0,
-          explanation: "A tripsina quebra após Arginina (R) e Lisina (K). Analisar os peptídeos curtos gerados é incrivelmente mais eficiente para o hardware atual."
-        },
-        {
-          q: "O que a fragmentação MS2 revela durante a análise de peptídeos?",
-          options: [
-            "Gera as séries de íons b e y quebrando a ligação peptídica; a distância (diferença de massa) entre os picos determina a sequência de aminoácidos.",
-            "O ponto exato onde a proteína estava operando dentro do retículo endoplasmático.",
-            "A cor e as dobras hidrofóbicas da molécula mãe.",
-            "Transforma o peptídeo de volta em nucleotídeos de DNA originais."
-          ],
-          answer: 0,
-          explanation: "O espectro MS2 é a 'impressão digital' sequencial. Cada diferença de massa entre picos adjacentes de uma série reflete a perda de um resíduo específico."
-        },
-        
-        /* ================= 25 NOVAS QUESTÕES (SIMULADO COMPLEMENTAR) ================= */
-        {
-          q: "No preparo de amostras proteômicas (Shotgun), qual é a finalidade de tratar as proteínas com DTT (Ditiotreitol) seguido de Iodoacetamida (IAA)?",
-          options: [
-            "O DTT reduz (quebra) as pontes dissulfeto e o IAA alquila as cisteínas, impedindo que as pontes se formem novamente.",
-            "O DTT atua como protease clivando o terminal amino, e o IAA adiciona carga positiva para o espectrômetro.",
-            "Servem para isolar apenas as proteínas do núcleo, degradando proteínas citoplasmáticas.",
-            "O DTT estabiliza o enovelamento tridimensional, enquanto o IAA previne a oxidação do triptofano."
-          ],
-          answer: 0,
-          explanation: "Quebrar as pontes dissulfeto (com DTT) e bloquear as cisteínas permanentemente (com IAA) é crucial para desenovelar a proteína totalmente e permitir o acesso da tripsina."
-        },
-        {
-          q: "A protease Tripsina é a enzima de escolha na proteômica 'bottom-up'. Qual é a sua especificidade de clivagem?",
-          options: [
-            "Cliva a cadeia peptídica no terminal carboxila (C-terminal) de resíduos de Arginina (R) e Lisina (K), exceto se seguidos de Prolina (P).",
-            "Cliva especificamente no terminal amino de resíduos hidrofóbicos como Leucina e Valina.",
-            "Fragmenta o esqueleto peptídico aleatoriamente para gerar peptídeos de tamanhos homogêneos.",
-            "Cliva exclusivamente proteínas que apresentam glicosilação na asparagina."
-          ],
-          answer: 0,
-          explanation: "A Tripsina tem clivagem altamente previsível (após R e K). Isso gera peptídeos com carga positiva na cauda (útil no espectrômetro), exceto se houver um impedimento estérico por uma Prolina adjacente."
-        },
-        {
-          q: "No contexto da espectrometria de massas para proteínas, quais são os dois principais métodos de ionização branda que permitiram a análise de macromoléculas biológicas (Nobel de 2002)?",
-          options: [
-            "ESI (Electrospray Ionization) e MALDI (Matrix-Assisted Laser Desorption/Ionization).",
-            "PCR (Polymerase Chain Reaction) e RMN (Ressonância Magnética Nuclear).",
-            "Cristalografia de Raios X e Eletroforese Capilar.",
-            "Espectroscopia de Infravermelho e Cromatografia Gasosa."
-          ],
-          answer: 0,
-          explanation: "ESI ioniza moléculas a partir de um líquido (ideal para acoplar ao LC - Cromatografia Líquida) e MALDI utiliza pulsos de laser sobre uma matriz sólida. Ambos não destroem as proteínas no processo."
-        },
-        {
-          q: "Qual analisador de massa revolucionou a proteômica moderna ao aprisionar íons ao redor de um eletrodo central (fuso), oferecendo altíssima resolução e exatidão de massa sem depender de ímãs supercondutores gigantes?",
-          options: [
-            "Orbitrap.",
-            "Time-of-Flight (TOF).",
-            "Quadrupolo.",
-            "Ion Trap Linear (LIT)."
-          ],
-          answer: 0,
-          explanation: "O Orbitrap analisa a frequência de oscilação harmônica dos íons rodando em torno do eixo central. Ele democratizou o acesso a medições de altíssima precisão (High-Resolution Mass Spectrometry)."
-        },
-        {
-          q: "Na proteômica quantitativa baseada em marcação isotópica in vivo, como funciona a técnica SILAC (Stable Isotope Labeling by Amino acids in Cell culture)?",
-          options: [
-            "Células em cultura são alimentadas com aminoácidos essenciais (geralmente Lisina e Arginina) contendo isótopos pesados (ex: 13C, 15N), incorporando o 'marcador' durante a síntese proteica natural.",
-            "Envolve a adição de corantes fluorescentes na amostra logo após a lise celular para medição por luz ultravioleta.",
-            "Consiste em reagir os peptídeos digeridos com tags isobáricas químicas no tubo de ensaio.",
-            "Usa radiação ionizante para criar quebras nas proteínas dependendo da sua meia-vida."
-          ],
-          answer: 0,
-          explanation: "SILAC é uma marcação metabólica (in vivo). Como a amostra inteira absorve aminoácidos 'pesados', podemos misturar as condições (Leve vs Pesada) logo no início, reduzindo muito os erros técnicos de pipetagem."
-        },
-        {
-          q: "Ferramentas como iTRAQ e TMT são marcadores ISOBÁRICOS utilizados para quantificação. Qual é o princípio analítico central dessas tags químicas?",
-          options: [
-            "No espectro primário (MS1), os peptídeos de amostras diferentes aparecem como um único pico (mesma massa total); a quantificação só ocorre quando a tag quebra no MS2, liberando íons repórteres de massas diferentes.",
-            "Elas colorem os peptídeos de vermelho e azul para separação no gel de poliacrilamida.",
-            "Fazem com que os peptídeos percam a sua carga elétrica, facilitando a medição por densitometria.",
-            "Elas modificam apenas as proteínas mutadas, ignorando as proteínas de tipo selvagem."
-          ],
-          answer: 0,
-          explanation: "Isobárico significa 'mesma massa'. Isso mantém o MS1 limpo. Quando fragmentados no MS2, a tag se parte revelando íons de baixo peso (repórteres) que indicam exatamente de qual tubo aquele peptídeo veio."
-        },
-        {
-          q: "Qual é a principal limitação ou desafio associado à Quantificação Label-Free (sem marcação isotópica) em proteômica?",
-          options: [
-            "Sofre com variações técnicas de corrida para corrida (reprodutibilidade LC-MS), exigindo algoritmos rigorosos de alinhamento de tempo de retenção e robusta padronização experimental.",
-            "Exige equipamentos que operam a zero absoluto, consumindo volumes massivos de hélio líquido.",
-            "Só consegue quantificar proteínas ribossomais e histonas.",
-            "A amostra precisa estar viva no momento da injeção no espectrômetro."
-          ],
-          answer: 0,
-          explanation: "Como no Label-Free as amostras não são misturadas (rodam em injeções separadas), qualquer oscilação no equipamento entre as corridas gera ruído que pode ser confundido com variação biológica real."
-        },
-        {
-          q: "No contexto da bioinformática proteômica, para que serve a estratégia de 'Target-Decoy' (banco de dados reverso)?",
-          options: [
-            "Para estimar a Taxa de Falsa Descoberta (FDR), buscando espectros contra proteínas invertidas/aleatórias para saber quantos achados são ruído estocástico.",
-            "Para traduzir reversamente peptídeos em cadeias de DNA e encontrar mutações não anotadas.",
-            "Para prever o dobramento secundário usando inteligência artificial.",
-            "Para alinhar as sequências unicamente com os genes de organismos modelo como C. elegans."
-          ],
-          answer: 0,
-          explanation: "O motor de busca sempre tentará associar o espectro MS2 a um peptídeo, mesmo que seja lixo. Adicionando uma base falsa ('decoy'), o software pode calcular a taxa de erro e cortar os achados para garantir confiança (geralmente FDR < 1%)."
-        },
-        {
-          q: "O que distingue a estratégia DDA (Data-Dependent Acquisition) da DIA (Data-Independent Acquisition, como SWATH)?",
-          options: [
-            "No DDA o equipamento escolhe ativamente só os íons mais intensos para fragmentar (viés para proteínas abundantes); no DIA a máquina fragmenta sequencialmente janelas largas, adquirindo MS2 de TODOS os íons simultaneamente.",
-            "O DDA é focado apenas na análise do DNA intacto, e o DIA é focado em lipídios.",
-            "O DDA foi descontinuado na década de 90 porque queimava a amostra, enquanto o DIA usa lasers a frio.",
-            "O DIA requer que a proteína esteja enovelada ativamente durante o MS, enquanto o DDA só funciona em peptídeos lineares."
-          ],
-          answer: 0,
-          explanation: "A transição de DDA para DIA é a grande revolução recente da proteômica: resolve o problema dos 'missing values' garantindo que o MS2 cubra o espectro inteiro, mesmo dos íons de baixa abundância."
-        },
-        {
-          q: "Para investigar modificações pós-traducionais (PTMs) reversíveis ligadas à sinalização em cascatas de quinases (Fosfoproteômica), qual etapa é obrigatoriamente adicionada ao protocolo?",
-          options: [
-            "O enriquecimento prévio das amostras usando afinidade metálica (ex: IMAC, TiO2) para pescar os fosfopeptídeos, que são escassos e ionizam mal.",
-            "O aquecimento da amostra a 100ºC em ácido clorídrico durante 24 horas.",
-            "A adição de DNA polimerases para amplificar as proteínas fosforiladas.",
-            "A passagem da amostra por um sequenciador de Sanger para ler as adeninas."
-          ],
-          answer: 0,
-          explanation: "A fosforilação ocorre em baixa estequiometria (nem toda molécula é fosforilada) e o grupo fosfato é muito negativo, suprimindo o sinal no MS. Se não 'pescar' o subproteoma fosforilado, ele some perante o excesso de peptídeos não modificados."
-        },
-        {
-          q: "O gel tradicional 2D possui problemas de reprodutibilidade limitantes. Como a técnica de 2D-DIGE (Difference Gel Electrophoresis) contornou esse problema analítico?",
-          options: [
-            "Marcando amostras diferentes com corantes fluorescentes distintos (Cy2, Cy3, Cy5) e correndo-as juntas no MESMO gel, eliminando a variação técnica entre géis.",
-            "Tornando os géis 100 vezes maiores para caber todas as proteínas individualmente.",
-            "Substituindo a eletricidade por um campo magnético gerado por ressonância.",
-            "Usando tripsina líquida para derreter as proteínas antes da passagem pelo gel."
-          ],
-          answer: 0,
-          explanation: "No 2D-DIGE (multiplexação fluorescente), o controle e o tratamento partilham o mesmo trajeto de poliacrilamida, tornando a comparação quantitativa exata via software de análise de imagem."
-        },
-        {
-          q: "Qual é o grande trunfo da Proteômica Top-down (proteína intacta) quando comparada ao Bottom-up, e por que não é tão usada em larga escala?",
-          options: [
-            "Trunfo: Enxerga a proteoforma exata (combinatória de PTMs e splicing) de forma integral. Desvantagem: Extrema dificuldade técnica em ionizar e fragmentar macromoléculas intactas no MS.",
-            "Trunfo: É 100 vezes mais barata e usa equipamentos de laboratórios didáticos. Desvantagem: Não lê PTMs.",
-            "Trunfo: Funciona em tecidos fixados em formol antigo. Desvantagem: Produz arquivos de dados pequenos demais.",
-            "Trunfo: Mede a velocidade da tradução ribossomal ao vivo. Desvantagem: Oculta as sequências de nucleotídeos."
-          ],
-          answer: 0,
-          explanation: "No Bottom-up perdemos o 'contexto' (a tripsina corta tudo, quebra as ligações entre PTMs distantes na mesma cadeia). O Top-down preserva a proteoforma inteira, mas demanda MS caríssimos, software não tão maduro e preparo complexo."
-        },
-        {
-          q: "No estudo de interatômica, a técnica clássica do Sistema Duplo Híbrido em Levedura (Y2H) tem como objetivo biológico descobrir o quê?",
-          options: [
-            "Interações físicas diretas proteína-proteína, reconstituindo artificialmente um fator de transcrição (como GAL4) para acionar um gene repórter vivo.",
-            "A velocidade pela qual um príon patogênico se dobra na placa de Petri.",
-            "As mutações de resistência a antibióticos no genoma mitocondrial do fungo.",
-            "Se o DNA do plasmídeo consegue ser traduzido sem o uso do retículo endoplasmático."
-          ],
-          answer: 0,
-          explanation: "O Y2H usa a modularidade dos fatores de transcrição (domínio de ligação ao DNA separado do domínio de ativação). Ao fundir a 'Isca' num domínio e a 'Presa' no outro, a interação física os une e ativa o gene (ex: cor ou sobrevivência)."
-        },
-        {
-          q: "A Co-imunoprecipitação acoplada a Espectrometria de Massas (Co-IP MS / AP-MS) é uma técnica de afinidade amplamente utilizada. O que ela revela que o Yeast Two-Hybrid (Y2H) frequentemente não consegue?",
-          options: [
-            "Identifica complexos proteicos inteiros no contexto fisiológico (in vivo), puxando não só interatores diretos, mas também os parceiros indiretos na mesma maquinaria.",
-            "Sequencia a proteína letra por letra, do terminal C ao terminal N.",
-            "Mede a voltagem exata que a proteína gera na membrana neuronal.",
-            "Garante a estrutura terciária estática no momento exato em que a célula entrou em mitose."
-          ],
-          answer: 0,
-          explanation: "Com um anticorpo contra a proteína 'isca' no tubo, puxa-se tudo o que está grudado nela (o complexo inteiro) a partir de um lisado real, incluindo cofatores não previstos. Y2H mede apenas interações par a par binárias."
-        },
-        {
-          q: "Historicamente, o Peptide Mass Fingerprinting (PMF) foi muito usado antes da popularização do MS/MS. No PMF, a proteína é identificada usando apenas:",
-          options: [
-            "O padrão (lista de massas no MS1) dos peptídeos gerados pela tripsina, cruzado contra a clivagem teórica de um banco de dados.",
-            "O padrão de cores gerado no azul de Coomassie após a desnaturação em calor.",
-            "A medição exata do tempo de retenção num cromatógrafo a gás.",
-            "A fragmentação MS2 profunda para sequenciar cada resíduo de aminoácido sequencialmente."
-          ],
-          answer: 0,
-          explanation: "No PMF, pega-se um spot puro de um gel 2D, digere-se e joga-se no MALDI-TOF. A 'impressão digital' das massas é comparada a um banco teórico. É inútil em misturas (shotgun) pois as massas de proteínas diferentes se misturam."
-        },
-        {
-          q: "Quais interações governam primariamente a formação da estrutura secundária das proteínas (hélices alfa e folhas beta)?",
-          options: [
-            "Pontes de hidrogênio formadas exclusivamente entre os grupos amina e carbonila (esqueleto peptídico).",
-            "Atração eletrostática forte entre resíduos de arginina e glutamato das cadeias laterais.",
-            "Pontes dissulfeto formadas covalentemente entre metioninas.",
-            "Repulsão hidrofóbica e hidrólise da camada de solvatação extracelular."
-          ],
-          answer: 0,
-          explanation: "Estrutura primária = ligação peptídica. Secundária = pontes de H do esqueleto (backbone). Terciária = interações das cadeias laterais (R) determinando a forma 3D global."
-        },
-        {
-          q: "Termodinamicamente, qual é a principal força motriz que força as proteínas globulares solúveis a se enovelarem espontaneamente em ambiente aquoso?",
-          options: [
-            "O Efeito Hidrofóbico: os aminoácidos apolares se escondem no interior da proteína para maximizar a entropia da água ao seu redor.",
-            "A adição contínua de moléculas de ATP sobre as cisteínas superficiais.",
-            "A atração gravitacional entre as massas dos anéis aromáticos pesados.",
-            "A ação magnética dos íons de ferro no interior do núcleo citoplasmático."
-          ],
-          answer: 0,
-          explanation: "A água odeia moléculas hidrofóbicas e organiza-se rigidamente ao redor delas (baixa entropia). O enovelamento enterra o núcleo hidrofóbico, liberando a água (aumentando a entropia global do sistema) e tornando o processo espontâneo."
-        },
-        {
-          q: "No contexto da sinalização para degradação proteica (turnover) via sistema ubiquitina-proteassoma, qual é o 'código' bioquímico que condena uma proteína à destruição celular?",
-          options: [
-            "A ligação covalente de uma cadeia de poliubiquitina (ligada usualmente à Lisina 48) no alvo, reconhecida pelo proteassoma 26S.",
-            "A clivagem de peptídeos sinais curtos nas extremidades por ação exclusiva do spliceossomo.",
-            "O excesso da adição de fosfato pela quinase na serina central do domínio motor.",
-            "A desaminação espontânea do carbono alfa da proteína desdobrada."
-          ],
-          answer: 0,
-          explanation: "A proteína não morre por acaso. A cascata E1, E2 e E3-ligase transfere as moléculas de Ubiquitina construindo uma cauda que funciona como um 'código de barras' de destruição lido pelo maquinário do proteassoma."
-        },
-        {
-          q: "Muitas proteínas secretadas no plasma são alvos terapêuticos. Como a maquinaria celular sabe que uma cadeia polipeptídica nascente deve ser encaminhada para a via secretória (retículo endoplasmático)?",
-          options: [
-            "Através da presença de um 'peptídeo sinal' N-terminal hidrofóbico (sinal de endereçamento), reconhecido pela partícula SRP enquanto o ribossomo traduz.",
-            "O mRNA dessas proteínas foge do núcleo e penetra passivamente no Golgi sem passar pelos ribossomos.",
-            "As proteínas maduras vagam pelo citosol até encontrar o poro da membrana celular externa.",
-            "Elas possuem uma cauda poli-A de aminoácidos estruturais que atrai vesículas de clatrina."
-          ],
-          answer: 0,
-          explanation: "O destino citológico é impresso na sequência. O peptídeo sinal funciona como o 'CEP' da proteína, pausando a tradução citosólica e empurrando o ribossomo para o RER."
-        },
-        {
-          q: "Qual dos 20 aminoácidos proteinogênicos padrão desempenha um papel crítico na estabilidade de proteínas extracelulares devido à sua capacidade de formar ligações covalentes cruzadas (pontes dissulfeto)?",
-          options: [
-            "Cisteína (C).",
-            "Triptofano (W).",
-            "Metionina (M).",
-            "Prolina (P)."
-          ],
-          answer: 0,
-          explanation: "Embora metionina tenha enxofre, apenas o grupo sulfidrila (-SH) livre da Cisteína consegue oxidar para criar pontes dissulfeto, sendo a chave da estrutura de anticorpos e insulina, por exemplo."
-        },
-        {
-          q: "Um microarranjo de proteínas (Protein Microarray) permite uma análise paralela de altíssima escala funcional. Para qual aplicação essa tecnologia é perfeitamente vocacionada?",
-          options: [
-            "Identificar centenas de interações sorológicas (ex: testar soro de paciente contra milhares de antígenos virais imobilizados no chip simultaneamente).",
-            "Desvendar a massa exata e a sequência MS2 desconhecida de proteínas tumorais de tecido grosso.",
-            "Cortar e colar DNA plasmideal a partir de bibliotecas metagenômicas do solo.",
-            "Extrair apenas proteínas estruturais (como colágeno) de ossos fossilizados."
-          ],
-          answer: 0,
-          explanation: "No microarray, as proteínas são impressas na lâmina vítrea de forma arranjada. Passa-se uma amostra clínica por cima e mede-se (por fluorescência) quem interagiu com quem, permitindo mapeamento veloz de anticorpos ou substratos de quinases."
-        },
-        {
-          q: "A identificação de uma proteína crucial no MS em um artigo científico quase sempre exige a chamada 'validação ortogonal' antes de publicação em revistas de alto impacto. Qual técnica clássica costuma cumprir esse papel?",
-          options: [
-            "Western Blot (Immunoblotting) ou ELISA utilizando anticorpos específicos para alvo identificado.",
-            "Sequenciamento de Sanger do DNA mitocondrial.",
-            "PCR em Tempo Real (qPCR) das regiões promotoras intrônicas.",
-            "Microscopia Eletrônica de Varredura focada em vírus endógenos."
-          ],
-          answer: 0,
-          explanation: "Para provar que a proteômica Discovery (shotgun/MS) não errou na predição de um biomarcador, a comunidade cobra a prova imunológica com Western Blot (ou ensaios direcionados MRM/PRM) demonstrando que a alteração de nível no tecido é fisicamente real."
-        },
-        {
-          q: "Na área da bioinformática proteômica, algoritmos heurísticos históricos criaram a base da identificação peptídica cruzando espectros experimentais (MS2) com espectros teóricos. Quais os nomes dos dois motores de busca mais clássicos do campo?",
-          options: [
-            "SEQUEST e Mascot.",
-            "BLAST e ClustalW.",
-            "Bowtie2 e BWA.",
-            "Cell Ranger e Seurat."
-          ],
-          answer: 0,
-          explanation: "O SEQUEST (Yates, 1994) e o Mascot (Perkins, 1999) fundaram a era moderna da proteômica de busca em bancos de dados por correlação cruzada e pontuação probabilística, respetivamente. Ferramentas modernas genômicas (como BWA, Cell Ranger) não analisam MS."
-        },
-        {
-          q: "Por que a comunidade de proteômica clínica considera a análise do plasma sanguíneo humano não apenas um gargalo monstruoso, mas, ao mesmo tempo, o 'Santo Graal' da descoberta de biomarcadores?",
-          options: [
-            "Porque o sangue irriga todos os tecidos e recolhe ativamente proteínas secretadas e produtos de necrose celular de qualquer órgão do corpo (atuando como sumidouro diagnóstico não-invasivo).",
-            "Porque o sangue não possui variação dinâmica e expressa perfeitamente todas as isoformas em iguais concentrações equimolares.",
-            "Porque o plasma humano contém 90% do seu peso em DNA livre, facilitando a montagem computacional.",
-            "Porque a falta de fibrina faz dele o único tecido viável para espectrômetros antigos baseados em TOF."
-          ],
-          answer: 0,
-          explanation: "O sangue é uma janela biológica. Se um fígado tem câncer, proteínas anômalas caem na corrente sanguínea. Se descobrirmos essas agulhas num palheiro (no meio da albumina), cria-se um teste diagnóstico barato, de rastreio sistêmico, via simples coleta de veia periférica."
-        },
-        {
-          q: "Em genômica, focamos primariamente na síntese. Contudo, em biologia de sistemas proteômicos, a regulação dinâmica celular depende de um fator vital adicional: o turnover proteico. O que isso significa?",
-          options: [
-            "As proteínas têm taxas de degradação (meias-vidas) que diferem brutalmente (de minutos para fatores de transcrição a anos para o cristalino ocular), o que molda a resposta adaptativa sem alterar o mRNA.",
-            "Refere-se ao momento em que as proteínas perdem sua funcionalidade enzimática devido ao giro estrutural D-aminoácido.",
-            "Indica que todas as proteínas da célula são invariavelmente recicladas a cada 12 horas, garantindo estoques limpos de aminoácidos.",
-            "É o giro que o ribossomo realiza no mRNA durante a terminação."
-          ],
-          answer: 0,
-          explanation: "A concentração proteica real (steady-state) não depende apenas da síntese, depende fortemente da degradação. Uma resposta veloz e agressiva de controle exige que a proteína se degrade tão rápido quanto foi feita."
-        }
+      answer: 1,
+      explanation: "Todas as células compartilham a mesma sequência de DNA (~3,1 Gb, ~19.400 genes codificantes); a diferença celular está em que parte é lida, quando e quanto de cada transcrito é produzido[cite: 3, 4]."
+    },
+    {
+      q: "A genômica funcional distingue-se da genômica estrutural principalmente porque:",
+      options: [
+        "Avalia a atividade e o uso dos elementos genômicos em diferentes condições, e não apenas a sequência estática.",
+        "Restringe-se à catalogação de variantes de nucleotídeo único (SNVs) em larga escala.",
+        "Não requer delineamento experimental com réplicas biológicas para produzir conclusões válidas.",
+        "Mede exclusivamente a sequência do DNA nuclear sem levar em conta o contexto celular."
       ],
- sistemas: [
-        /* ================= 11 QUESTÕES ORIGINAIS ================= */
-        {
-          q: "Qual o problema da abordagem puramente reducionista (deletar um gene e ver o que acontece) em biologia de sistemas?",
-          options: [
-            "O sistema costuma ser robusto. A ausência de fenótipo ao deletar não prova inutilidade do gene, revela a ação de vias redundantes e feedbacks.",
-            "A biologia reducionista garante sempre uma resposta binária simples e irrefutável sobre o destino da proteína.",
-            "Mutantes de deleção morrem imediatamente em 100% dos testes, inviabilizando experimentos.",
-            "Em eucariotos, a falta de qualquer gene dissolve imediatamente a parede celular externa."
-          ],
-          answer: 0,
-          explanation: "Em leveduras, a imensa maioria das deleções singulares não gera fenótipos em condições ideais devido à robustez distribuída (compensação)."
-        },
-        {
-          q: "No contexto de sistemas, qual a definição que distingue 'Complicado' de 'Complexo'?",
-          options: [
-            "Um sistema complexo possui componentes não lineares e adaptativos, gerando propriedades emergentes que não podem ser previstas dissecando as partes isoladamente.",
-            "Um sistema complexo é apenas um sistema complicado que usa energia elétrica.",
-            "Ambos são sinônimos perfeitos na engenharia e biologia computacional moderna.",
-            "Um sistema complicado não pode ser consertado, enquanto o complexo obedece a regras de montagem linear."
-          ],
-          answer: 0,
-          explanation: "Um avião é complicado (montar as peças resolve). Uma célula é complexa (peças adaptam seu comportamento conforme a rede inteira)."
-        },
-        {
-          q: "O que define as Propriedades de Tipo II (Propriedades Emergentes)?",
-          options: [
-            "São o produto das interações; funções ou comportamentos que existem no sistema todo mas não em nenhuma das peças separadas (ex: ritmo circadiano).",
-            "A soma matemática isolada da massa de cada componente, refletindo a inércia do indivíduo.",
-            "Propriedades secretadas no espaço extracelular que não interagem com o núcleo.",
-            "Apenas a cor e a textura dos tecidos biológicos expostos ao ar atmosférico."
-          ],
-          answer: 0,
-          explanation: "Tipo I é soma. Tipo II (emergente) é interação. O comportamento do conjunto transcende as capacidades isoladas dos componentes."
-        },
-        {
-          q: "Em teoria dos grafos aplicada à biologia, o que significa 'Intermediação' (Betweenness) de um nó?",
-          options: [
-            "Quantos caminhos mínimos da rede passam por aquele nó, destacando-o como um 'gargalo' crítico na conexão entre módulos distintos.",
-            "A quantidade total de ramificações (arestas) que o nó tem ligadas diretamente ao centro do núcleo.",
-            "O nível máximo de expressão gênica que o nó atinge antes de degradar.",
-            "A medida da distância física em micrômetros entre a proteína e a membrana celular."
-          ],
-          answer: 0,
-          explanation: "Nós com alta intermediação conectam sub-redes isoladas. Eles controlam o fluxo de informação cruzada na célula."
-        },
-        {
-          q: "O que difere as redes regulatórias das redes simples de interação proteína-proteína (PPI)?",
-          options: [
-            "A rede regulatória exige direcionamento das arestas (quem manda em quem), mostrando o fluxo da informação (fator -> gene).",
-            "A PPI exige gráficos tridimensionais, enquanto a regulatória é montada num modelo linear de texto puro.",
-            "Redes regulatórias só aceitam metabólitos (carboidratos e lipídios), descartando dados ômicos.",
-            "As arestas em PPI são sempre irreversíveis e autodestrutivas."
-          ],
-          answer: 0,
-          explanation: "Em PPI, a aresta diz apenas 'eles encostam'. Numa rede regulatória, a direção é a própria biologia causal: A expressa B."
-        },
-        {
-          q: "O que a aresta de 'Coexpressão' indica e qual é a armadilha na sua interpretação?",
-          options: [
-            "Ela mede correlação matemática. O erro comum é assumir que indica obrigatoriamente interação física ou causa direta.",
-            "Prova cientificamente que um gene engoliu o outro na evolução.",
-            "Mostra que os produtos dos genes co-cristalizaram na mesma estrutura terciária.",
-            "Garante que se você deletar o nó A, o nó B imediatamente parará seu ciclo celular."
-          ],
-          answer: 0,
-          explanation: "Correlacionar não é causar. Dois genes podem coexpressar por responderem juntos a um hormônio comum, sem interagir entre si."
-        },
-        {
-          q: "Como opera a modelagem Top-down (de cima para baixo)?",
-          options: [
-            "Parte do ruído e da imensidão de dados ômicos para descobrir padrões e sub-redes sem hipóteses estritas prévias; entrega bons candidatos, mas peca no detalhe do mecanismo.",
-            "Seleciona 3 enzimas hiperestudadas e constrói modelos diferenciais com taxa de reação molecular precisa (bottom-up).",
-            "Foca apenas em microscopia óptica avançada para ver o fluxo em tempo real.",
-            "É uma técnica exclusiva de cirurgiões para analisar dissecções anatômicas maciças."
-          ],
-          answer: 0,
-          explanation: "O Top-down é descritivo e estatístico, desenhando o mapa macro. O Bottom-up foca no mecanicismo exato de poucos nós."
-        },
-        {
-          q: "O que é vital entender sobre a arquitetura da Gene Ontology (Ontologia Gênica)?",
-          options: [
-            "É um grafo direcionado redundante. Anotar um gene num termo específico automaticamente o espalha por todos os 'termos pais' acima na hierarquia.",
-            "É uma lista alfabética simples no formato Excel que deleta redundâncias automaticamente.",
-            "Foi desenhada para garantir que cada gene receba no máximo uma única tag exclusiva de função.",
-            "Os nós do grafo ontológico bloqueiam qualquer interpretação humana visual."
-          ],
-          answer: 0,
-          explanation: "Por usar lógica de conjuntos (is_a, part_of), termos profundos acarretam os termos gerais. 40 'enriquecimentos' estatísticos podem significar a mesma resposta em bloco."
-        },
-        {
-          q: "Qual o papel fundamental da 'medida do grau do nó (k)' em redes biológicas?",
-          options: [
-            "Quantificar conexões. Nós de grau elevadíssimo (hubs) são frequentemente essenciais à viabilidade celular.",
-            "Definir a temperatura ideal de hibridização do DNA alvo no chip.",
-            "Revelar o tamanho molecular do metabólito associado ao peso da rede.",
-            "Contar as repetições de aminoácidos aromáticos na cadeia isolada do citoplasma."
-          ],
-          answer: 0,
-          explanation: "A topologia de rede mostra que retirar nós periféricos causa pouco dano, mas nocautear os 'Hubs' fortemente conectados fragmenta o sistema."
-        },
-        {
-          q: "No marcante artigo sobre o Interatoma do SARS-CoV-2 (2020), qual foi o foco da triagem farmacológica?",
-          options: [
-            "Focou nas proteínas da célula humana ('drogáveis') recrutadas e sequestradas pelas proteínas do vírus, testando fármacos hospedeiro-dirigidos.",
-            "Desenvolveu supercomputadores apenas para simular a hidratação do envelope lipídico viral.",
-            "Almejou criar vacinas mutacionais que deletavam os ribossomos da faringe.",
-            "Desenhou compostos químicos que cortassem precisamente a cauda poli-A do vírus no plasma."
-          ],
-          answer: 0,
-          explanation: "Ao invés de buscar alvo nas parcas proteínas virais, eles mapearam a extensa rede humana que o vírus precisa para operar, usando bloqueadores já existentes."
-        },
-        {
-          q: "Como o estudo de coexpressão em cérebros com Alzheimer (2013) aplicou o fluxo ideal de biologia de sistemas?",
-          options: [
-            "Achou o módulo hiperativo (ômica top-down), inferiu o gene TYROBP como regulador mestre pela topologia da rede, e testou a hipótese in vivo com sucesso.",
-            "Deletou todos os genes cerebrais de uma só vez, medindo qual camundongo sobrevivia à cirurgia radical.",
-            "Aplicou apenas Bottom-up cinético, estudando uma molécula isolada de Tau por 10 anos.",
-            "Usou redes de transporte logístico da biologia industrial para entregar vacinas experimentais."
-          ],
-          answer: 0,
-          explanation: "Esse é o roteiro completo: Medir os cérebros (ômica) -> Modelar os módulos/rede bayesiana -> Prever TYROBP -> Validar em modelo biológico (Teste)."
-        },
-        
-        /* ================= 25 NOVAS QUESTÕES (SIMULADO COMPLEMENTAR) ================= */
-        {
-          q: "A maioria das redes biológicas (como interatomas e metabólicas) exibe uma topologia 'livre de escala' (scale-free). O que isso caracteriza matematicamente?",
-          options: [
-            "A distribuição dos graus dos nós segue uma lei de potência, significando que a vasta maioria dos nós tem poucas conexões, enquanto um pequeno número (hubs) é altamente conectado.",
-            "Todos os nós possuem exatamente o mesmo número de conexões (k), formando uma malha cristalina perfeita.",
-            "A rede não possui nenhum padrão matemático, distribuindo as conexões de forma puramente aleatória (Gaussiana).",
-            "Significa que a rede não pode ser medida em escalas físicas (nanômetros), apenas em unidades lógicas."
-          ],
-          answer: 0,
-          explanation: "Redes livres de escala são dominadas por hubs. Isso as torna extremamente robustas a mutações aleatórias (pois a chance de acertar um hub é pequena), mas muito vulneráveis a ataques direcionados aos hubs."
-        },
-        {
-          q: "Na biologia de sistemas, o conceito de 'Letalidade Sintética' é uma prova elegante da robustez da rede. Como ele se define?",
-          options: [
-            "A mutação isolada no gene A ou no gene B é tolerada, mas a perda simultânea de ambos resulta em morte celular, revelando vias compensatórias.",
-            "A introdução de um gene de uma espécie sintética letal em uma bactéria hospedeira inofensiva.",
-            "O fenômeno onde excesso de ATP bloqueia a síntese letal de proteínas ribossomais.",
-            "Quando duas proteínas estruturais formam cristais no citoplasma causando apoptose mecânica."
-          ],
-          answer: 0,
-          explanation: "A letalidade sintética revela redundância (propriedade emergente de resiliência). Se a Via A cai, a Via B assume. Destruir as duas mata o sistema. É uma estratégia promissora para o tratamento do câncer (ex: inibidores de PARP em tumores BRCA mutados)."
-        },
-        {
-          q: "O princípio de 'Culpa por Associação' (Guilt by Association) é vastamente utilizado em análises de redes de coexpressão. Qual é a sua premissa fundamental?",
-          options: [
-            "Genes que se agrupam no mesmo módulo de expressão coordenada tendem a compartilhar a mesma função biológica ou pertencer à mesma via regulatória.",
-            "Proteínas que induzem apoptose sempre destroem os genes adjacentes fisicamente no mesmo cromossomo.",
-            "Genes não codificantes assumem a função proteica de seus vizinhos espaciais no retículo endoplasmático.",
-            "Qualquer gene superexpresso em tecido tumoral é obrigatoriamente um oncogene letal."
-          ],
-          answer: 0,
-          explanation: "Se o Gene X (função desconhecida) liga e desliga perfeitamente em sincronia com Genes A, B e C (da via de glicólise), infere-se, por culpa de sua associação com eles na rede, que o Gene X também participa do metabolismo glicolítico."
-        },
-        {
-          q: "Ferramentas clássicas de biologia de sistemas como o WGCNA (Weighted Gene Co-expression Network Analysis) agrupam genes em 'módulos'. Como a ferramenta resume a atividade de um módulo de 500 genes para correlacioná-lo com traços fenotípicos (ex: resposta a um remédio)?",
-          options: [
-            "Calculando o 'Eigengene', que atua como o primeiro componente principal e representa o perfil de expressão resumido daquele módulo inteiro.",
-            "Deletando 499 genes aleatoriamente e usando o último como representante isolado da via.",
-            "Somando mecanicamente os tamanhos em quilobases de todos os genes do módulo.",
-            "Atribuindo um valor booleano fixo (1 ou 0) para o módulo baseando-se apenas na metilação de suas histonas."
-          ],
-          answer: 0,
-          explanation: "O Eigengene (do alemão 'próprio gene') é uma construção matemática (PCA) que sintetiza o comportamento geral do módulo. Assim, em vez de cruzar 20.000 genes com a doença, você cruza apenas 10 ou 20 Eigengenes (módulos)."
-        },
-        {
-          q: "Diferente das redes de coexpressão de Pearson que mostram correlação simétrica bidirecional, as Redes Bayesianas são construídas na biologia de sistemas com que objetivo superior?",
-          options: [
-            "Inferir a direcionalidade e a probabilidade condicional de causalidade (ex: Gene A regula Gene B), montando grafos direcionados baseados em probabilidades.",
-            "Impedir o uso de inteligência artificial na determinação de alvos proteômicos.",
-            "Anular completamente o background não-codificante das amostras de sangue periférico.",
-            "Medir fisicamente as ligações iônicas entre dois nucleotídeos paralelos de DNA."
-          ],
-          answer: 0,
-          explanation: "Redes Bayesianas modelam dependências condicionais (se A expressa, quão provável é B expressar por causa de A?). Isso confere direção às setas (causalidade inferida estatisticamente), algo impossível em simples correlações (onde A e B podem apenas responder a um terceiro fator C)."
-        },
-        {
-          q: "Na análise de redes biológicas, o que a métrica 'Coeficiente de Aglomeração' (Clustering Coefficient) quantifica em relação a um nó específico?",
-          options: [
-            "Mede a probabilidade de que os 'amigos' desse nó também sejam 'amigos' entre si, indicando a tendência de formação de cliques (módulos densos).",
-            "Mede a velocidade em milissegundos com que as proteínas se juntam no aparato de Golgi.",
-            "Calcula quantos RNAs mensageiros falharam ao sair do poro nuclear de forma aglomerada.",
-            "A quantidade de calorias consumida pelo nó durante a replicação da dupla hélice."
-          ],
-          answer: 0,
-          explanation: "O coeficiente de aglomeração avalia a densidade local. Redes biológicas têm coeficientes de aglomeração altíssimos quando comparadas a redes aleatórias, pois genes trabalham em vias altamente compartimentadas e conectadas internamente."
-        },
-        {
-          q: "As 'Redes de Mundo Pequeno' (Small-world networks) são uma propriedade fascinante do interatoma celular. O que caracteriza o comportamento de mundo pequeno?",
-          options: [
-            "Alto grau de aglomeração local combinada a 'Caminhos Mais Curtos' globais, permitindo que a informação flua de um lado a outro da rede em pouquíssimos passos.",
-            "O confinamento restrito das proteínas às organelas de origem, impedindo a comunicação cruzada (cross-talk).",
-            "A exclusividade do tamanho celular em procariontes menores que 1 micrômetro.",
-            "O fenômeno onde plasmídeos perdem progressivamente seu DNA até tornarem-se microRNAs."
-          ],
-          answer: 0,
-          explanation: "Assim como na teoria dos 'Seis Graus de Separação' humana, uma perturbação no núcleo pode sinalizar a membrana rapidamente porque a arquitetura de 'Mundo Pequeno' garante atalhos sistêmicos através dos hubs."
-        },
-        {
-          q: "Em circuitos de regulação gênica (Network Motifs), o 'Motivo de Alimentação Adiante' (Feed-forward loop - FFL) é incrivelmente comum. Qual é a sua utilidade clássica na biologia celular?",
-          options: [
-            "Agir como um filtro retardado para ruídos (ignorar picos curtos de estímulo) ou acelerar o tempo de resposta a um sinal contínuo.",
-            "Assegurar a degradação irreversível do retículo endoplasmático após o primeiro uso.",
-            "Sintetizar glicose a partir de oxigênio durante privação metabólica letal.",
-            "Impedir que qualquer gene seja expresso mais de uma vez ao longo da vida da célula."
-          ],
-          answer: 0,
-          explanation: "No FFL tipo 1 coerente (A ativa B; A e B ativam C), o sinal 'A' deve estar ligado tempo suficiente para a proteína 'B' acumular e, juntos, ativarem 'C'. Se 'A' for só um ruído passageiro (falso sinal), 'C' não dispara. É uma defesa fantástica do sistema."
-        },
-        {
-          q: "Considerando a dinâmica celular regulada por 'Loops de Feedback', qual é a diferença fenotípica crítica gerada por um Feedback Negativo em contraposição a um Feedback Positivo?",
-          options: [
-            "Feedback Negativo gera homeostase e estabilidade (ou oscilação como relógios biológicos); Feedback Positivo gera amplificação e bistabilidade (decisões do tipo 'tudo ou nada', ex: diferenciação).",
-            "Feedback Positivo destrói a fita dupla de DNA, enquanto o Negativo a repara enzimaticamente.",
-            "O Positivo ocorre exclusivamente no núcleo celular, e o Negativo unicamente na membrana citoplasmática externa.",
-            "Não há diferença matemática; ambos conduzem invariavelmente ao silenciamento progressivo de toda a cromatina eucariótica."
-          ],
-          answer: 0,
-          explanation: "Feedback negativo (A ativa B, B inibe A) mantém os níveis controlados em torno de um limite (ex: insulina/glicose). Feedback positivo (A ativa B, B ativa mais A) leva o sistema a um novo estado fixo irreversível (ex: especialização de uma célula-tronco)."
-        },
-        {
-          q: "Na ontologia gênica (Gene Ontology - GO), a árvore é categorizada em três domínios principais e independentes que definem a biologia de qualquer gene. Quais são eles?",
-          options: [
-            "Processo Biológico (BP), Função Molecular (MF) e Componente Celular (CC).",
-            "Transcrição Básica (BT), Tradução Tardia (LT) e Degradação Acelerada (AD).",
-            "Epigenoma Metilado (ME), Exoma Codificante (CE) e Promotor Distal (DP).",
-            "Citoplasma Aquoso (AC), Matriz Mitocondrial (MM) e Núcleo Central (CN)."
-          ],
-          answer: 0,
-          explanation: "Esses 3 eixos são o padrão mundial. Função Molecular (o que a proteína faz sozinha, ex: catálise); Processo Biológico (qual programa maior ela integra, ex: divisão celular); Componente Celular (onde ela está na célula, ex: mitocôndria)."
-        },
-        {
-          q: "Por que as análises de Enriquecimento Funcional (como GSEA ou ORA) devem sempre aplicar a Correção de Múltiplos Testes (como o método FDR de Benjamini-Hochberg)?",
-          options: [
-            "Porque ao testar milhares de vias (GO terms) simultaneamente com p<0,05, centenas de vias aparecerão como estatisticamente 'significativas' por puro acaso estatístico.",
-            "Para forçar o algoritmo computacional a alinhar os transcritos contra o genoma de referência primata.",
-            "Porque os genes super-expressos e sub-expressos cancelam-se na soma matemática vetorial.",
-            "Para aumentar a precisão dos espectrômetros de massa de segunda geração nas análises de plasma."
-          ],
-          answer: 0,
-          explanation: "O p-valor de 0,05 aceita 5% de chance de erro. Se você testar 10.000 categorias ontológicas, 500 darão 'falso positivo'. O método FDR (False Discovery Rate) ajusta as penalidades matemáticas para salvar a análise de ser engolida por ruído aleatório."
-        },
-        {
-          q: "O paradigma da 'Medicina de Redes' (Network Medicine) reinterpreta o conceito de doença humana não como um gene isolado quebrado, mas como:",
-          options: [
-            "Uma perturbação de 'módulos de doença' dentro do interatoma global, onde múltiplas proteínas interconectadas perdem sua regulação coletiva sistêmica.",
-            "Uma deficiência nutricional isolada tratável com doses maciças de polimerase sintética injeções intravenosas.",
-            "Erros randômicos que ocorrem exclusivamente nas mitocôndrias durante a senescência natural do hospedeiro.",
-            "Apenas uma anomalia de carga elétrica transitória nas membranas dos eritrócitos maduros."
-          ],
-          answer: 0,
-          explanation: "A Network Medicine postula que produtos de genes mutados causadores de uma mesma doença (ex: asma) não estão espalhados aleatoriamente; eles co-habitam sub-redes conectadas (Disease Modules). A doença emerge quando essa vizinhança entra em colapso."
-        },
-        {
-          q: "Em integração multiômica, os métodos focados em 'Redução de Dimensionalidade', como MOFA (Multi-Omics Factor Analysis), são primordiais. Qual problema biológico estatístico eles tentam resolver?",
-          options: [
-            "A 'Maldição da Dimensionalidade' (p >> n): lidar com milhões de variáveis (genes, proteínas, metabólitos) extraídas de um número reduzido de amostras (pacientes).",
-            "A falha mecânica de pipetagem em placas de 96 poços gerando volumes distorcidos.",
-            "A falta de reagentes de biologia molecular em países em desenvolvimento (corte de custos operacionais).",
-            "A quebra espontânea da fibra de cromatina de 30nm sob a ação de forças centrífugas pesadas."
-          ],
-          answer: 0,
-          explanation: "Quando você cruza RNA, Proteína e Metilação de 50 pacientes, você tem 100.000 medições contra 50 indivíduos. Ferramentas como MOFA condensam esse oceano de variáveis em poucos fatores latentes (eixos de variação biológica) que descrevem o sistema."
-        },
-        {
-          q: "A modelagem do tipo 'Bottom-up' (de baixo para cima) em sistemas metabólicos emprega com frequência Equações Diferenciais Ordinárias (ODEs) e cinética enzimática. Qual é a sua maior fraqueza prática?",
-          options: [
-            "Ela requer o conhecimento mecanicista profundo da via e a medição exata de parâmetros cinéticos (Vmax, Km) para todas as enzimas, algo impraticável para o genoma inteiro.",
-            "Ela não pode ser aplicada a tecidos vegetais fotossintéticos devida à interferência térmica da luz.",
-            "Ela só aceita números inteiros, falhando ao modelar concentrações moleculares decrescentes.",
-            "Ela subentende que os modelos de rede de transcrição ignoram o DNA nuclear por completo."
-          ],
-          answer: 0,
-          explanation: "Para rodar um modelo bottom-up cinético preciso (ex: modelo de simulação do coração virtual), você precisa conhecer como cada peça se comporta sob várias pressões. Isso é maravilhoso e preciso para sistemas pequenos/isolados, mas inescalável para a célula inteira atual."
-        },
-        {
-          q: "Para contornar o problema dos parâmetros enzimáticos exatos requeridos pelo modelo ODE, uma alternativa altamente usada em redes regulatórias globais é a Modelagem Booleana. Nela, o estado de um gene é tratado como:",
-          options: [
-            "Variáveis binárias puras de 0 (desligado/inativo) e 1 (ligado/ativo), atualizadas por regras de lógica (AND, OR, NOT).",
-            "Um gradiente infinito de números quânticos reais modelados exclusivamente em arquiteturas de nuvem supercondutora.",
-            "Uma estrutura física tangível que se deforma sob a ação de vetores de velocidade de splicing diferencial.",
-            "Um bloco passivo que não pode influenciar outros nós em hipótese alguma durante o mesmo ciclo temporal."
-          ],
-          answer: 0,
-          explanation: "Na modelagem Booleana, simplificamos brutalmente a realidade contínua. Exemplo: 'O Gene C só está ON (1) se A estiver ON (1) AND B estiver OFF (0)'. Com essa simplificação algébrica, os computadores conseguem prever o comportamento global de milhares de genes sem cinética química."
-        },
-        {
-          q: "Na bioinformática aplicada, o que representa o conceito de 'Hubs Dis-assortative' comumente visto na topologia do interatoma proteico humano?",
-          options: [
-            "A tendência marcante de proteínas muito conectadas (hubs) evitarem se ligar diretamente entre si, ligando-se preferencialmente a nós de baixo grau periféricos (criando uma estrutura em 'estrela radial').",
-            "A capacidade dos hubs de se replicarem de forma independente do DNA polimerase em tempos de estresse térmico.",
-            "A característica onde um hub de proteína recusa a interação com qualquer molécula que já possua grupo fosfato.",
-            "A obrigação matemática onde todos os hubs devem ter obrigatoriamente um número ímpar de arestas conectadas."
-          ],
-          answer: 0,
-          explanation: "Na biologia, grandes centros de controle (hubs) geralmente não formam painéis densos entre si; eles controlam 'raios' de subordinados (nós locais) para compartimentalizar o dano (se um hub travar, os outros não são imediatamente puxados para a falha direta)."
-        },
-        {
-          q: "As análises de topologia frequentemente identificam 'Módulos Funcionais' usando algoritmos de clustering nos grafos. Do ponto de vista da modularidade, o que qualifica uma estrutura biológica como um módulo?",
-          options: [
-            "Um subgrupo de nós com interações internas densamente empacotadas (fortes) e conectividade esparsa (fraca) com os nós do resto da grande rede global.",
-            "Um segmento contínuo de DNA genômico linear com ausência absoluta de íntrons em eucariontes.",
-            "A membrana lipídica que reveste vacúolos e peroxissomos inibindo o trânsito intracelular de proteínas quinases.",
-            "A soma absoluta dos pesos isotópicos das cadeias laterais aromáticas de um canal iônico de transmembrana."
-          ],
-          answer: 0,
-          explanation: "Biologia opera por compartimentação (módulos). Um módulo em um grafo é matematicamente visível quando há muitas arestas conectando o Grupo A entre si, mas quase nenhuma aresta conectando o Grupo A ao Grupo B."
-        },
-        {
-          q: "A Perturbação Biológica Sistêmica dita que: 'Você nunca compreenderá o sistema em estado de repouso absoluto'. Por que isso é um axioma da Biologia de Sistemas?",
-          options: [
-            "A arquitetura regulatória, buffers e redundâncias da célula só se tornam expostos à medida analítica quando a célula é empurrada para fora do seu estado estacionário (via drogas, deleções ou estresse).",
-            "A membrana celular oculta passivamente o código de barras de proteínas imunes apenas quando o animal está dormindo profundamente.",
-            "Técnicas de eletroforese requerem que a célula continue viva e nadando livremente ao longo do gel de agar.",
-            "DNA parado (em repouso) não emite a radiação gama requerida pelos sensores do sequenciador de segunda geração."
-          ],
-          answer: 0,
-          explanation: "Observar um transcriptoma sem estímulo descreve 'o que é'. Aplicar um pulso hormonal e colher amostras a cada 10 minutos revela 'quem liga quem' e 'quem desliga o quê'. A perturbação ativa a rede (dinâmica)."
-        },
-        {
-          q: "Diferente das análises isoladas genômicas ou proteômicas, a integração focada no conceito de 'Ruído Biológico' (Biological Noise) aponta que as flutuações estocásticas na expressão gênica:",
-          options: [
-            "Não são apenas falhas técnicas dos equipamentos, mas processos intrínsecos valiosos (aleatoriedade) explorados pela evolução para gerar diversidade fenotípica em populações clonais.",
-            "Acontecem exclusivamente devido a variações térmicas nas salas de sequenciamento desreguladas.",
-            "Devem ser silenciadas pela inserção de retrovírus de calibração padronizados no tecido hepático do paciente.",
-            "Causam falhas catastróficas instantâneas porque qualquer oscilação minúscula rompe o envelope nuclear eucarionte."
-          ],
-          answer: 0,
-          explanation: "Duas bactérias com o mesmo DNA (clones) no mesmo tubo de ensaio expressam níveis de proteínas ligeiramente distintos (ruído estocástico intrínseco e extrínseco). Em tempos de estresse, a bactéria cujo ruído lhe deu 'a mais' de certa enzima pode ser a única a sobreviver (aposta evolutiva)."
-        },
-        {
-          q: "O 'Cross-talk' (conversa cruzada) entre vias de sinalização invalida grande parte dos diagramas moleculares dos livros didáticos (como KEGG simplificados). Por quê?",
-          options: [
-            "Porque as cascatas de sinalização (ex: MAPK, PI3K) não operam como trilhos paralelos fechados; elas se interceptam agressivamente criando nós compartilhados complexos de processamento de decisão.",
-            "Porque as vias de transporte celular apagam os fatores de transcrição antes de encostarem na TATA box.",
-            "Porque vias opostas secretam anticorpos que precipitam organelas adversárias no fundo da placa de Petri.",
-            "Porque os diagramas antigos supunham falsamente que a energia celular provinha da radiação ultravioleta."
-          ],
-          answer: 0,
-          explanation: "Um livro costuma desenhar a via A-B-C operando em um canto, e X-Y-Z em outro. Na célula, a proteína 'B' pode inibir a 'Y', e 'Z' pode ativar 'A'. Essa interseção (cross-talk) é a essência da complexidade que demanda a modelagem de grafos inteiros em biologia de sistemas."
-        },
-        {
-          q: "O método estatístico ARACNE (Algorithm for the Reconstruction of Accurate Cellular Networks) aplica a teoria da informação mútua para deduzir redes transcricionais. Qual erro ele soluciona de forma brilhante aplicando o Teorema de Desigualdade de Dados?",
-          options: [
-            "Ele elimina interações indiretas falsas; se A regula B e B regula C, ele detecta e corta a correlação espúria visível entre A e C, restando apenas os alvos diretos genuínos.",
-            "Ele preenche buracos (missing values) no DNA não codificante inventando letras aleatórias ponderadas pela média da amostra.",
-            "Calcula o peso exato de cada célula viva no tubo para ajustar a emissão de luz fluorescente verde do cromóforo.",
-            "Reverte mutações frameshift no mRNA antes de este alcançar os sítios P do maquinário ribossomal."
-          ],
-          answer: 0,
-          explanation: "Se A faz B subir, e B faz C subir. A estatística básica (Pearson) dirá que A e C estão altamente correlacionados e tentará desenhar uma linha entre eles. ARACNE (Teoria da Informação) avalia trigramas e percebe que A não fala com C sem B, cortando a aresta A-C falsa."
-        },
-        {
-          q: "Quando dizemos que os nós (proteínas ou genes) e as arestas de uma rede têm 'Pesos' (Weights) atribuídos, ao que nos referimos biológica ou estatisticamente?",
-          options: [
-            "O peso pode refletir a força real e física da interação, ou o nível de confiança estatística de que aquela aresta seja biologicamente verdadeira baseada nos dados integrados.",
-            "Refere-se estritamente à massa molar atômica do aminoácido contido no terminal C do polipeptídeo envolvido.",
-            "Corresponde à quantidade de gravidade (força G) exercida pelas mitocôndrias durante a rotação nos rotores ultracentrífugos de laboratório.",
-            "Indica quantos dias aquele experimento demorou para ser analisado pelos bioinformatas no computador."
-          ],
-          answer: 0,
-          explanation: "Redes binárias dizem apenas 1 (interage) ou 0 (não interage). Redes com pesos (weighted) expressam tons de cinza: a aresta tem peso 0.9 (alta confiança experimental) ou peso 0.2 (correlação fraca), aumentando a acurácia dos modelos topológicos preditivos."
-        },
-        {
-          q: "No clássico paradigma das redes de coexpressão e doenças, a 'Assortatividade por Doença' demonstrou qual padrão surpreendente na topologia global do interatoma humano (ex: Goh et al., 2007)?",
-          options: [
-            "Produtos gênicos relacionados a uma mesma patologia têm uma alta propensão a interagirem fisicamente e a formarem vizinhanças (módulos) no interior da rede celular.",
-            "Doenças diferentes jamais compartilham a mesma mutação genômica estrutural de forma randômica.",
-            "Vírus pandêmicos conectam-se unicamente às proteínas menos importantes da célula, evitando intencionalmente as áreas centrais das cascatas regulatórias.",
-            "Genes associados ao câncer espalham-se o máximo possível pela rede para anular a formação local de complexos terciários aberrantes."
-          ],
-          answer: 0,
-          explanation: "Os genes das doenças não estão dispersos aleatoriamente na rede (como poeira num quarto). Eles formam clústeres. Consequentemente, mutações vizinhas causam doenças similares (fenótipos parecidos), pilar da Network Medicine moderna."
-        },
-        {
-          q: "A Engenharia Reversa (Reverse Engineering) de redes genéticas é o 'Santo Graal' computacional da Biologia de Sistemas. Qual é a meta central desta abordagem técnica?",
-          options: [
-            "Deduzir todo o diagrama regulatório subjacente de influências causais e ativações a partir unicamente de tabelas brutas estáticas (ou séries temporais) de abundância molecular global (ex: milhares de RNA-seqs).",
-            "Clonar artificialmente fragmentos de mamífero e inseri-los linearmente numa Escherichia coli mutante (transgênica de retorno).",
-            "Aplicar métodos físicos de cristalização reversível nas enzimas ativas presentes no espaço peritubular dos rins de laboratório animal.",
-            "Traduzir o código fonte escrito em linguagem Python pelo pesquisador de volta para dados sequenciados em linguagem binária 1 e 0 nativos do processador de silicone."
-          ],
-          answer: 0,
-          explanation: "Você tem 1.000 fotos de RNA-seq (a expressão de 20.000 genes). A engenharia reversa usa algoritmos severos de machine learning e matemática bayesiana para inferir retroativamente: 'Dado esses dados malucos, a única arquitetura que os gerou é esta rede X que controla Y'."
-        },
-        {
-          q: "As Análises de Vias (Pathway Analysis) baseadas puramente em diagramas como os de KEGG enfrentam uma limitação epistemológica profunda em biologia de sistemas. Qual limitação é essa?",
-          options: [
-            "Vias isoladas são invenções ou convenções arbitrárias humanas focadas num fenótipo histórico. Na realidade da célula viva não há fronteiras físicas, o metabolismo é uma enorme teia integrada global contínua.",
-            "Células humanas não possuem de forma alguma a via da glicólise ou da apoptose conservadas da evolução dos primatas e anfíbios terrestres originais.",
-            "O banco de dados KEGG exige que a biologia seja expressada em três dimensões puras imersas em nitrogênio líquido nativo congelado antes do uso.",
-            "Análises focadas em vias detectam automaticamente as variantes alternativas dos cromossomos exógenos circulares em anel do plasma do paciente e corrompem a via."
-          ],
-          answer: 0,
-          explanation: "Sistemas são holísticos. Nós desenhamos a 'Via de Insulina' com caixinhas separadas para ajudar nosso cérebro humano a estudar, mas para a célula essa fronteira não existe, é tudo uma sopa gigante onde o citrato da energia afeta a metilação do DNA que afeta a expressão local."
-        }
-      ]
-    };
+      answer: 0,
+      explanation: "A genômica estrutural foca na sequência estática ('qual é a sequência?'), enquanto a funcional mede a atividade dos elementos sob diferentes células, tempos e estímulos ('o que a sequência faz?')[cite: 2, 8]."
+    },
+    {
+      q: "Dos nove pontos de controle da expressão gênica (do DNA à proteína ativa), quais são diretamente cobertos por uma análise de RNA-seq?",
+      options: [
+        "Apenas a síntese proteica e a degradação proteica via proteassoma.",
+        "Os pontos 1 a 6, que vão da estrutura da cromatina até a degradação do transcrito de RNA.",
+        "A tradução ribossomal e as modificações pós-traducionais de resíduos.",
+        "O dobramento tridimensional das cadeias polipeptídicas e sua secreção celular."
+      ],
+      answer: 1,
+      explanation: "Os pontos de 1 a 6 pertencem ao transcritoma e são acessíveis pelo RNA-seq, enquanto os pontos 7 a 9 (tradução, dobramento/modificação e degradação proteica) pertencem ao proteoma[cite: 11, 49]."
+    },
+    {
+      q: "Sobre a acessibilidade da cromatina e o início da transcrição, assinale a correta:",
+      options: [
+        "A transcrição ocorre de forma homogênea tanto na heterocromatina quanto na eucromatina.",
+        "A RNA-polimerase II tem livre acesso ao promotor mesmo com nucleossomos fortemente posicionados.",
+        "A heterocromatina apresenta nucleossomos compactados que impedem a montagem basal da maquinaria de transcrição.",
+        "A metilação de ilhas CpG em promotores facilita imediatamente a ligação de ativadores transcricionais."
+      ],
+      answer: 2,
+      explanation: "A transcrição só ocorre onde a cromatina está aberta (eucromatina) e o nucleossomo deslocado; na heterocromatina compactada a maquinaria não consegue se montar[cite: 12]."
+    },
+    {
+      q: "Os fatores gerais de transcrição (como TFIID, TFIIB, TFIIE e TFIIH) atuam no promotor basal caracterizando-se por:",
+      options: [
+        "Serem expressos de maneira tecido-específica, definindo a identidade celular.",
+        "Reconhecerem sequências degeneradas exclusivas de genes induzíveis.",
+        "Serem componentes universais necessários para a montagem do complexo de pré-iniciação em promotores de Pol II.",
+        "Atuarem de forma independente da RNA-polimerase II para recrutar histonas desacetilases."
+      ],
+      answer: 2,
+      explanation: "Fatores gerais estão presentes em toda célula e são necessários em promotores de Pol II, não explicando por si sós a especificidade de expressão dos tecidos[cite: 16, 17]."
+    },
+    {
+      q: "A especificidade da expressão gênica observada em células diferenciadas decorre da lógica combinatória porque:",
+      options: [
+        "Cada gene humano é controlado rigorosamente por apenas um fator de transcrição exclusivo.",
+        "Um mesmo fator pode ativar ou reprimir alvos distintos dependendo de quais parceiros regulatórios estão presentes na célula.",
+        "Os fatores específicos ligam-se apenas a promotores que contêm a TATA box clássica.",
+        "Fatores específicos bloqueiam a atividade de helicase do TFIIH em promotores ativos."
+      ],
+      answer: 1,
+      explanation: "A regulação transcricional é combinatória: um fator regula muitos genes e um gene responde a vários fatores simultâneos, dependendo dos parceiros presentes naquela célula[cite: 18]."
+    },
+    {
+      q: "No processamento do pré-mRNA acoplado ao domínio CTD da RNA-polimerase II, ocorrem três eventos principais:",
+      options: [
+        "Capping 5', splicing de íntrons e poliadenilação 3'.",
+        "Degradação mediada pelo proteassoma, dobramento e ubiquitinação.",
+        "Adição de peptídeo sinal, fosforilação e exportação vesicular.",
+        "Clivagem proteolítica por tripsina, deadenilação e translocação."
+      ],
+      answer: 0,
+      explanation: "Capping 5', remoção de íntrons por splicing e poliadenilação 3' ocorrem durante a transcrição acoplados ao CTD; apenas transcritos corretamente processados são exportados[cite: 19]."
+    },
+    {
+      q: "Qual é o evento de splicing alternativo mais comum em humanos (~40% dos casos)?",
+      options: [
+        "Retenção de íntron.",
+        "Exon skipping (pulo de éxon).",
+        "Sítio 3' aceptor alternativo.",
+        "Éxons mutuamente exclusivos obrigatórios."
+      ],
+      answer: 1,
+      explanation: "O pulo de éxon (exon skipping) responde por cerca de 40% dos eventos de splicing alternativo descritos em humanos[cite: 20]."
+    },
+    {
+      q: "A retenção de íntron como evento predominante de splicing alternativo é observada tipicamente em:",
+      options: [
+        "Mamíferos e primatas superiores.",
+        "Plantas e fungos.",
+        "Células procarióticas.",
+        "Linhagens celulares exclusivamente neuronais."
+      ],
+      answer: 1,
+      explanation: "Enquanto o pulo de éxon predomina em humanos, a retenção de íntron é o tipo de splicing alternativo predominante em plantas e fungos[cite: 20]."
+    },
+    {
+      q: "Em relação à composição em massa do RNA celular total versus a informação biológica de interesse:",
+      options: [
+        "O mRNA perfaz mais de 85% da massa de RNA celular total.",
+        "O rRNA representa 80% a 90% da massa de RNA, enquanto o mRNA representa apenas cerca de 3% a 5%.",
+        "O tRNA representa a grande maioria dos transcritos mapeados em corridas de RNA-seq padrão.",
+        "Os lncRNAs compõem a maior parte da massa de RNA isolada em preparos de rotina."
+      ],
+      answer: 1,
+      explanation: "O rRNA domina a massa da amostra (80–90%), embora o mRNA represente a maior parte do interesse informativo (~93%), exigindo etapas para evitar o sequenciamento desnecessário de rRNA[cite: 26, 27]."
+    },
+    {
+      q: "Ao optar por um protocolo de RNA-seq baseado em seleção por cauda poli(A), o pesquisador:",
+      options: [
+        "Captura eficientemente lncRNAs não poliadenilados e circRNAs.",
+        "Isola prioritariamente mRNAs maduros poliadenilados, deixando de fora espécies de RNA sem cauda poli(A).",
+        "Elimina a exigência de verificar o RIN da amostra antes do sequenciamento.",
+        "Garante a preservação e sequenciamento de fragmentos de rRNAs 18S e 28S."
+      ],
+      answer: 1,
+      explanation: "A seleção por oligo-dT liga-se à cauda poli(A), enriquecendo mRNAs maduros e deixando de fora circRNAs, lncRNAs sem cauda poli(A) ou RNAs degradados[cite: 26, 27]."
+    },
+    {
+      q: "O método de preparo de biblioteca por depleção de rRNA é especialmente vantajoso quando:",
+      options: [
+        "O foco do estudo restringe-se estritamente a mRNAs eucarióticos intactos com baixo custo.",
+        "Se utilizam amostras com RNA degradado ou há interesse em quantificar lncRNAs não poliadenilados.",
+        "Deseja-se sequenciar unicamente moléculas curtas de microRNA maduro de 20 nucleotídeos.",
+        "O objetivo é eliminar a necessidade de síntese de cDNA por transcriptase reversa."
+      ],
+      answer: 1,
+      explanation: "A depleção de rRNA remove o RNA ribossomal sem exigir cauda poli(A) íntegra, sendo ideal para amostras degradadas e para a captura de lncRNAs não poliadenilados[cite: 26, 27]."
+    },
+    {
+      q: "Por que um mRNA abundante detectado por RNA-seq não reflete obrigatoriamente um gene com alta taxa de transcrição?",
+      options: [
+        "Porque o RNA-seq mede estado estacionário (síntese versus degradação), de modo que um mRNA abundante pode ser apenas muito estável.",
+        "Porque a enzima transcriptase reversa transcreve preferencialmente genes de baixo tamanho.",
+        "Porque a abundância de mRNA reflete unicamente a taxa de tradução ribossomal.",
+        "Porque a presença de íntrons duplica artificialmente o sinal de contagem nas matrizes brutas."
+      ],
+      answer: 0,
+      explanation: "O RNA-seq quantifica o estado estacionário; a quantidade final de um transcrito é o saldo entre síntese e degradação, podendo decorrer de uma meia-vida longa e não de transcrição intensa[cite: 21, 47]."
+    },
+    {
+      q: "O silenciamento pós-transcricional mediado por microRNAs (miRNAs) caracteriza-se por:",
+      options: [
+        "Emparelhamento da região semente (2–8 nt) guiada pelo complexo RISC à 3'UTR do mRNA-alvo, desestabilizando-o ou bloqueando a tradução.",
+        "Ligação direta do complexo RISC ao promotor central rico em CpG do DNA.",
+        "Fosforilação da cauda CTD da RNA-polimerase II com interrupção do alongamento.",
+        "Poliadenilação excessiva do pré-mRNA dentro do núcleo celular."
+      ],
+      answer: 0,
+      explanation: "Os miRNAs maduros guiam o complexo RISC via pareamento da região semente (2–8 nt) com a 3'UTR do transcrito, levando ao bloqueio de tradução ou à deadenilação e degradação[cite: 21]."
+    },
+    {
+      q: "O fenômeno epigenético do imprinting genômico é caracterizado por:",
+      options: [
+        "Mutações pontuais silenciosas que ocorrem exclusivamente durante a embriogênese tardia.",
+        "Expressão monoalélica estável dependente da origem parental (alelo materno ou paterno silenciado).",
+        "Perda irreversível do braço longo de um cromossomo em células somáticas maduras.",
+        "Reversão do padrão de splicing alternativo pela temperatura do tecido."
+      ],
+      answer: 1,
+      explanation: "No imprinting genômico, determinados genes são expressos apenas a partir do alelo paterno ou materno, com o outro alelo epigeneticamente silenciado[cite: 23]."
+    },
+    {
+      q: "As síndromes de Prader-Willi e Angelman decorrem da mesma deleção (15q11-q13), mas causam fenótipos distintos porque:",
+      options: [
+        "A deleção paterna manifesta Prader-Willi e a materna Angelman, pois o alelo remanescente está silenciado por imprinting.",
+        "A deleção no cromossomo materno afeta proteínas mitocondriais e a paterna proteínas nucleares.",
+        "Os pontos de quebra da fita de DNA em homens e mulheres ocorrem em éxons totalmente distintos.",
+        "A perda do alelo paterno impede a síntese de rRNA, enquanto a do materno impede a tradução de tRNAs."
+      ],
+      answer: 0,
+      explanation: "Como a região 15q11-q13 possui genes sob imprinting, a perda do alelo ativo paterno causa Prader-Willi e a perda do alelo ativo materno causa Angelman, pois a cópia restante está silenciada[cite: 23]."
+    },
+    {
+      q: "Quais são os três qualificadores fundamentais sem os quais um transcritoma não é reproduzível nem comparável?",
+      options: [
+        "Amostra (tecido/célula), Momento temporal e Condição experimental (estímulo/fase).",
+        "Comprimento do gene, Índice de refração e Temperatura de anelamento dos primers.",
+        "Massa seca celular, Volume de tampão de lise e Tempo de centrifugação.",
+        "Número de éxons, Sítio promotor e Tipo de polimerase utilizada."
+      ],
+      answer: 0,
+      explanation: "O transcritoma varia dinamicamente; logo, sem declarar amostra (qual tecido/célula), momento (quando) e condição (qual estímulo/fase), os dados não são interpretáveis[cite: 25]."
+    },
+    {
+      q: "As métricas de normalização RPKM/FPKM e TPM corrigem dois vieses técnicos centrais em RNA-seq:",
+      options: [
+        "Profundidade total da corrida de sequenciamento e comprimento do gene.",
+        "Eficiência da transcriptase reversa e presença de mutações pontuais.",
+        "Taxa de degradação da proteína e volume citoplasmático.",
+        "Número de nucleossomos e porcentagem de íntrons retidos."
+      ],
+      answer: 0,
+      explanation: "Duas amostras nunca recebem a mesma quantidade total de leituras (profundidade) e genes longos captam mais leituras ao acaso; TPM e FPKM normalizam ambos os fatores[cite: 34]."
+    },
+    {
+      q: "A principal vantagem conceitual do TPM em relação ao RPKM/FPKM é:",
+      options: [
+        "O TPM normaliza primeiro pelo comprimento e depois pela profundidade, tornando as proporções de expressão somáveis e comparáveis entre amostras.",
+        "O TPM é imune a artefatos de amplificação de PCR sem requerer réplicas biológicas.",
+        "O TPM quantifica diretamente a quantidade absoluta de proteínas funcionais.",
+        "O TPM só pode ser aplicado a análises de transcritoma espacial com captura por spots."
+      ],
+      answer: 0,
+      explanation: "Ao normalizar primeiro o comprimento e depois a profundidade, a soma de TPM em cada amostra é constante (1 milhão), tornando-o o padrão descritivo entre amostras[cite: 34]."
+    },
+    {
+      q: "Uma limitação conceitual importante do RNA-seq em bulk é que:",
+      options: [
+        "O resultado é uma média ponderada de milhares de células, podendo mascarar variações restritas a subpopulações raras.",
+        "Não permite alinhar sequências conhecidas contra o genoma de referência.",
+        "É incapaz de quantificar genes que contenham múltiplos éxons e isoformas de splicing.",
+        "Só detecta moléculas de RNA que possuam modificações químicas pós-traducionais."
+      ],
+      answer: 0,
+      explanation: "No RNA-seq em bulk, o dado reflete a média do tecido; variações acentuadas em tipos celulares raros podem se diluir ou simular alterações que não existem homogeneamente[cite: 25, 41]."
+    },
+    {
+      q: "Em relação aos métodos analíticos empregados para quantificar o estado de condensação cromatínica e a ligação de fatores ao DNA, assinale a correlação metodológica correta:",
+      options: [
+        "O ChIP-seq requer a hiperativação da endonuclease Tn5 para inserir adaptadores em regiões nucleossomo-livres.",
+        "O ATAC-seq utiliza a transposase Tn5, que corta e insere adaptadores simultaneamente nas regiões abertas da cromatina, não gerando leituras onde a cromatina está fechada.",
+        "O DNase-seq baseia-se exclusivamente em anticorpos monoclonais para imunoprecipitar marcas específicas de histonas desacetiladas.",
+        "O scATAC-seq prescinde de adaptadores de sequenciamento porque avalia unicamente o desvio espectral da fluorescência nuclear."
+      ],
+      answer: 1,
+      explanation: "No ATAC-seq, a transposase Tn5 corta o DNA e insere adaptadores no mesmo passo nas regiões de cromatina aberta; onde a cromatina está compactada em heterocromatina, a enzima não tem acesso e nenhuma leitura é produzida[cite: 13, 14, 15]."
+    },
+    {
+      q: "Na interpretação de dados de expressão diferencial por RNA-seq via Volcano Plot, os eixos representam grandezas estatísticas e biológicas específicas. Assinale a afirmação correta:",
+      options: [
+        "O eixo x reflete a significância estatística dada por -log10(p ajustado), enquanto o eixo y mede a amplitude de mudança em log2(Fold Change).",
+        "Genes com baixíssimo valor de p ajustado e expressiva repressão situam-se no quadrante superior esquerdo do gráfico.",
+        "Pontos localizados na base inferior do gráfico representam genes diferencialmente expressos com alto valor de significância biológica comprovada.",
+        "O limiar horizontal de significância (p ajustado = 0,05) separa genes induzidos daqueles reprimidos ao longo da escala."
+      ],
+      answer: 1,
+      explanation: "No Volcano Plot, o eixo x plota a magnitude da mudança em log2(Fold Change) (reprimidos à esquerda, induzidos à direita) e o eixo y plota a confiança/estatística em -log10(p ajustado). Assim, genes significativamente reprimidos situam-se no topo superior esquerdo[cite: 36]."
+    },
+    {
+      q: "Antes de rodar testes de expressão diferencial (como DESeq2 ou edgeR), a análise de componentes principais (PCA) é empregada como etapa exploratória crítica. Seu papel fundamental é:",
+      options: [
+        "Substituir a necessidade de alinhamento das reads contra o genoma de referência.",
+        "Verificar se as réplicas se agrupam pela variável biológica de interesse ou se há separação indevida induzida por efeito de lote (batch effect).",
+        "Corrigir o comprimento dos transcritos aplicando o algoritmo de centralidade ponderada.",
+        "Calcular a taxa absoluta de degradação citoplasmática de mRNAs através do valor de PC1."
+      ],
+      answer: 1,
+      explanation: "O PCA permite visualizar o agrupamento global das amostras; se elas se separarem pelo lote de processamento em vez do grupo biológico (controle vs. tratado), o desenho experimental está comprometido e não é possível separar o efeito técnico do biológico[cite: 35, 37]."
+    },
+    {
+      q: "Ao analisar a representação funcional de genes diferencialmente expressos, a literatura recente aponta limitações analíticas entre ORA e GSEA. Assinale a alternativa correta:",
+      options: [
+        "O ORA não depende da definição de nenhum limiar arbitrário de corte de fold-change ou p-valor.",
+        "O GSEA utiliza a lista completa ranqueada de genes sem corte prévio, mas pode gerar enriquecimentos artificiais mesmo sem genes diferenciais, apresentando viés recorrente para conjuntos ribossomais.",
+        "Termos de Gene Ontology (GO) são estritamente independentes e ortogonais, eliminando qualquer redundância funcional entre categorias.",
+        "O teste hipergeométrico do ORA prescinde da declaração de um conjunto de genes de fundo (background) para controlar falsos positivos."
+      ],
+      answer: 1,
+      explanation: "O GSEA avalia a lista ranqueada completa e capta mudanças sutis, mas revisões metodológicas mostram que ele pode indicar enriquecimento mesmo na ausência de genes diferenciais e tem viés frequente para conjuntos ribossomais, além de termos de GO serem inerentemente redundantes e hierárquicos[cite: 38]."
+    },
+    {
+      q: "A incorporação de Identificadores Moleculares Únicos (UMIs) na preparação de bibliotecas de RNA-seq de célula única (scRNA-seq) visa resolver diretamente:",
+      options: [
+        "A retenção artefatual de íntrons no pré-mRNA nuclear.",
+        "As distorções de contagem decorrentes de duplicatas de PCR, permitindo quantificar moléculas originais de RNA e não cópias amplificadas.",
+        "A indução artefatual de genes de choque térmico provocada pela dissociação tecidual enzimática.",
+        "A necessidade de realizar alinhamento contra o transcriptoma de referência por ferramentas como STAR ou HISAT2."
+      ],
+      answer: 1,
+      explanation: "Cada molécula original de RNA recebe uma sequência aleatória única (UMI) antes da PCR. Dessa forma, leituras que compartilham o mesmo UMI e o mesmo alinhamento são agrupadas como duplicatas de amplificação, permitindo contar cópias de moléculas originais[cite: 42]."
+    }
+  ],
+
+  proteomica: [
+    {
+      q: "Quais pontos de controle da expressão gênica a proteômica acrescenta em relação à transcritômica?",
+      options: [
+        "Pontos 1 a 3 (acessibilidade da cromatina, iniciação e elongação transcricional).",
+        "Pontos 4 a 6 (capping, splicing e exportação de transcritos).",
+        "Pontos 7 a 9 (tradução, dobramento/modificação pós-traducional e degradação proteica).",
+        "Nenhum ponto adicional, já que mRNA e proteína possuem correlação estequiométrica linear."
+      ],
+      answer: 2,
+      explanation: "O RNA-seq alcança até a degradação do mRNA (ponto 6); a proteômica cobre os pontos de 7 a 9, abrangendo a montagem do complexo de tradução, dobramento, modificações e proteólise[cite: 11, 49]."
+    },
+    {
+      q: "A correlação entre abundância de mRNA e de proteína em mamíferos é moderada (10–40% em estudos gerais). Além de erros técnicos, isso ocorre porque:",
+      options: [
+        "Existem camadas biológicas regulatórias adicionais: eficiência de tradução, meia-vida proteica, PTMs e localização celular.",
+        "O DNA genômico degrada os transcritos de mRNA antes que cheguem aos poros nucleares.",
+        "As chaperonas impedem a tradução de qualquer mRNA originado de promotores basais.",
+        "O ribossomo traduz com eficiência idêntica todas as sequências nucleotídicas existentes."
+      ],
+      answer: 0,
+      explanation: "Entre o mRNA e a proteína ativa atuam a eficiência traducional, o controle de degradação pelo proteassoma, modificações químicas (PTMs) e o endereçamento subcelular[cite: 51]."
+    },
+    {
+      q: "Uma proteína é ativada rapidamente por fosforilação sem alteração em sua quantidade total. O que se observa no RNA-seq?",
+      options: [
+        "Um aumento equivalente nas contagens de reads do gene correspondente.",
+        "Nenhuma alteração, pois a modificação ocorre na proteína e não afeta as contagens de mRNA no estado estacionário.",
+        "Uma diminuição drástica no log2 fold-change por repressão transcricional.",
+        "O surgimento imediato de novos sítios de splicing alternativo no pré-mRNA."
+      ],
+      answer: 1,
+      explanation: "A fosforilação é uma modificação pós-traducional (nível proteômico); a alteração funcional ocorre sem que haja necessária mudança na transcrição ou abundância do mRNA[cite: 51, 67]."
+    },
+    {
+      q: "A estrutura secundária de proteínas (como hélices alfa e folhas beta) é estabilizada primariamente por:",
+      options: [
+        "Pontes de hidrogênio entre os grupos C=O e N-H do esqueleto polipeptídico principal.",
+        "Ligações covalentes de dissulfeto entre resíduos adjacentes de cisteína.",
+        "Atrações eletrostáticas exclusivas entre cadeias laterais ácidas e básicas.",
+        "Interações hidrofóbicas que excluem aminoácidos aromáticos para o exterior aquoso."
+      ],
+      answer: 0,
+      explanation: "A conformação secundária é mantida por pontes de hidrogênio regulares entre os grupos carbonila (C=O) e amina (N-H) da cadeia principal do polipeptídeo[cite: 61, 62]."
+    },
+    {
+      q: "A conformação tridimensional completa de uma única cadeia polipeptídica (estrutura terciária) é definida:",
+      options: [
+        "Exclusivamente pela sequência de nucleotídeos de seus íntrons correspondentes.",
+        "Pelas interações fracas (efeito hidrofóbico, pontes de H, iônicas, van der Waals) e pontes de dissulfeto entre as cadeias laterais (grupos R).",
+        "Pela associação obrigatória de duas ou mais subunidades com grupos prostéticos idênticos.",
+        "Apenas pela clivagem do peptídeo sinal mediada pela SRP citoplasmática."
+      ],
+      answer: 1,
+      explanation: "A estrutura terciária reflete o arranjo tridimensional total da cadeia, estabilizado pela soma de interações das cadeias laterais dos aminoácidos e pontes dissulfeto[cite: 56, 61, 63]."
+    },
+    {
+      q: "O exemplo da hemoglobina humana (heterotetrâmero alfa2-beta2) ilustra que a estrutura quaternária:",
+      options: [
+        "Confere propriedades biológicas emergentes (como cooperatividade na ligação de O2) que as subunidades isoladas não possuem.",
+        "Impede a síntese de cadeias polipeptídicas no interior de eritrócitos maduros.",
+        "Elimina a presença de estruturas secundárias na conformação funcional final.",
+        "Torna as cadeias proteicas imunes à desnaturação térmica ou química."
+      ],
+      answer: 0,
+      explanation: "A hemoglobina possui quatro subunidades; a montagem quaternária viabiliza propriedades emergentes, como a ligação cooperativa de oxigênio, ausentes nas subunidades isoladas[cite: 65, 106]."
+    },
+    {
+      q: "Qual é a função biológica do peptídeo sinal em proteínas recém-sintetizadas?",
+      options: [
+        "Atuar como marca de degradação imediata pelo proteassoma 26S citoplasmático.",
+        "Direcionar o complexo ribossomo-cadeia nascente para a membrana do retículo endoplasmático.",
+        "Fosforilar o domínio C-terminal da RNA-polimerase II durante o alongamento.",
+        "Fornecer energia na forma de ATP para a montagem de folhas beta amiloides."
+      ],
+      answer: 1,
+      explanation: "O peptídeo sinal é um código N-terminal reconhecido pela partícula SRP, que conduz o ribossomo ao translocon do retículo endoplasmático[cite: 68, 69]."
+    },
+    {
+      q: "Após direcionar a proteína nascente para o lúmen do retículo endoplasmático, o que ocorre com o peptídeo sinal?",
+      options: [
+        "É clivado e removido da cadeia pela enzima peptidase de sinal associada ao poro.",
+        "Permanece permanentemente ancorado ao sítio ativo para modular sua especificidade.",
+        "É transferido para a mitocôndria para atuar como tRNA adaptador.",
+        "Sofre glicosilação maciça para estabilizar a extremidade N-terminal madura."
+      ],
+      answer: 0,
+      explanation: "A peptidase de sinal cliva o peptídeo sinal no poro do retículo, liberando a proteína em translocação no lúmen[cite: 69]."
+    },
+    {
+      q: "O ponto isoelétrico (pI) de uma proteína é a grandeza física que representa:",
+      options: [
+        "O valor de pH no qual a molécula atinge solubilidade aquosa máxima.",
+        "O pH no qual a carga elétrica líquida da proteína é igual a zero (forma zwitteriônica máxima).",
+        "A massa molecular exata expressa em quilodáltons (kDa) calculada por migração.",
+        "A voltagem necessária para ionizar a macromolécula na fonte de Electrospray."
+      ],
+      answer: 1,
+      explanation: "O pI é o pH no qual os grupos ionizáveis se equilibram de modo que a carga líquida da proteína seja nula[cite: 58, 75]."
+    },
+    {
+      q: "Na eletroforese bidimensional (2D-PAGE), as duas dimensões separam as proteínas respectivamente por:",
+      options: [
+        "Ponto isoelétrico (IEF na 1ª dimensão) e massa molecular (SDS-PAGE na 2ª dimensão).",
+        "Massa molecular na 1ª dimensão e hidrofobicidade na 2ª dimensão.",
+        "Afinidade por anticorpo na 1ª dimensão e razão massa/carga (m/z) na 2ª dimensão.",
+        "Abundância relativa na 1ª dimensão e tempo de retenção cromatográfico na 2ª dimensão."
+      ],
+      answer: 0,
+      explanation: "A primeira dimensão utiliza uma fita com gradiente de pH para focalização isoelétrica (pI), e a segunda dimensão separa por tamanho/massa molecular via SDS-PAGE[cite: 75]."
+    },
+    {
+      q: "Quando uma proteína sofre fosforilação, como se altera a sua posição em um gel bidimensional (2D-PAGE)?",
+      options: [
+        "A mancha desloca-se horizontalmente em direção a regiões de pH mais ácido (menor pI), mantendo massa quase inalterada.",
+        "A proteína dobra de massa aparente e migra para o topo do gel SDS-PAGE.",
+        "A mancha move-se obrigatoriamente para a extremidade mais básica (maior pI) do gradiente de focalização.",
+        "A proteína perde solubilidade em SDS e deixa de penetrar na matriz de poliacrilamida."
+      ],
+      answer: 0,
+      explanation: "O grupo fosfato adiciona cargas negativas à proteína, reduzindo seu ponto isoelétrico e deslocando sua mancha em direção ao polo ácido no eixo do pI[cite: 58, 75, 77]."
+    },
+    {
+      q: "O termo 'proteoforma' é empregado na proteômica moderna para designar:",
+      options: [
+        "As diferentes espécies moleculares de proteínas derivadas de um mesmo gene devido a splicing alternativo, processamento e modificações pós-traducionais.",
+        "Apenas as proteínas virais recombinantes purificadas e expressas em bactérias.",
+        "A estrutura primária linear deduzida diretamente do sequenciamento genômico sem íntrons.",
+        "Complexos quaternários que contêm exclusivamente subunidades ribossomais."
+      ],
+      answer: 0,
+      explanation: "Proteoformas são o conjunto de variantes moleculares ativas que um gene pode gerar combinando isoformas de transcrição, clivagens e modificações pós-traducionais[cite: 71]."
+    },
+    {
+      q: "Os três componentes básicos e sequenciais de um espectrômetro de massas são:",
+      options: [
+        "Fonte de ionização, analisador de massas e detector.",
+        "Coluna de afinidade, fita de IPG e cuba vertical com SDS.",
+        "Laser de fragmentação, leitor de densitometria e membrana de PVDF.",
+        "Tubo de voo, termociclador capilar e câmara de ionização por UV."
+      ],
+      answer: 0,
+      explanation: "Todo espectrômetro de massas compõe-se de uma fonte para ionizar a amostra, um analisador para separar os íons e um detector para quantificar as partículas[cite: 79]."
+    },
+    {
+      q: "As técnicas de ionização branda ESI (Electrospray) e MALDI foram determinantes para a proteômica porque:",
+      options: [
+        "Transferem macromoléculas intactas para a fase gasosa na forma de íons sem destruí-las.",
+        "Fragmentam as ligações peptídicas antes da entrada na câmara de vácuo.",
+        "Permitem sequenciar diretamente as fitas de mRNA sem conversão em cDNA.",
+        "Precipitam proteínas abundantes como a albumina antes da análise instrumental."
+      ],
+      answer: 0,
+      explanation: "Ambas as técnicas realizam ionização branda, transferindo grandes moléculas biológicas para a fase gasosa sem causar pirólise ou fragmentação descontrolada[cite: 80, 81]."
+    },
+    {
+      q: "Por que os analisadores de espectrometria de massas medem a razão massa/carga (m/z) e não a massa pura da proteína?",
+      options: [
+        "Porque a separação física no vácuo baseia-se na aceleração e deflexão de partículas carregadas por campos elétricos e magnéticos.",
+        "Porque as proteínas perdem sua massa atômica durante o processo de volatilização.",
+        "Porque a massa de uma molécula em fase gasosa depende exclusivamente de sua conformação tridimensional.",
+        "Porque os detectores só respondem a variações de pressão osmótica na saída do capilar."
+      ],
+      answer: 0,
+      explanation: "Campos elétricos e magnéticos interagem com cargas; o comportamento dinâmico do íon no analisador é governado estritamente pela sua razão massa/carga (m/z)[cite: 79, 83]."
+    },
+    {
+      q: "Na proteômica bottom-up (shotgun), a tripsina é a enzima proteolítica padrão porque:",
+      options: [
+        "Cliva especificamente após resíduos de lisina (K) e arginina (R), gerando peptídeos com carga positiva na extremidade C-terminal.",
+        "Cliva aleatoriamente qualquer ligação que contenha aminoácidos hidrofóbicos alifáticos.",
+        "Preserva as ligações dissulfeto intactas, impedindo a dissociação das subunidades.",
+        "Degrada exclusivamente proteínas mal enoveladas ou que contenham a mutação Delta F508."
+      ],
+      answer: 0,
+      explanation: "A tripsina cliva especificamente após Arg e Lys (exceto antes de Pro), produzindo fragmentos de tamanho ideal com resíduo básico terminal propício à ionização[cite: 88]."
+    },
+    {
+      q: "Na espectrometria de massas em tandem (MS/MS), como a sequência de aminoácidos de um peptídeo é determinada a partir do espectro?",
+      options: [
+        "Pela diferença de massa (m/z) observada entre picos consecutivos das séries de íons de fragmentação (íons b e y).",
+        "Pelo tempo que o peptídeo intacto leva para eluir na coluna de cromatografia líquida.",
+        "Pela intensidade de fluorescência emitida pelos anéis aromáticos de fenilalanina e triptofano.",
+        "Pelo cálculo da absorbância em 280 nm de cada gota que atinge o detector."
+      ],
+      answer: 0,
+      explanation: "A fragmentação da cadeia gera íons fragmentos; a diferença de massa entre picos adjacentes na mesma série revela o resíduo exato de aminoácido perdido[cite: 89, 90]."
+    },
+    {
+      q: "Como os algoritmos identificam proteínas a partir dos espectros de fragmentação (MS2)?",
+      options: [
+        "Realizam a digestão in silico de bancos de dados proteicos e comparam os espectros teóricos gerados com os espectros medidos.",
+        "Sequenciam diretamente o DNA correspondente da amostra por alinhamento com BLAST.",
+        "Medem a constante cinética de degradação da proteína contra padrões químicos comerciais.",
+        "Estimam a estrutura terciária por cristalografia de raios X acoplada ao computador."
+      ],
+      answer: 0,
+      explanation: "O algoritmo faz a digestão in silico de sequências do banco (como UniProt), simula espectros teóricos de fragmentação e pontua a melhor correspondência estatística com o espectro real[cite: 90, 93]."
+    },
+    {
+      q: "Para controlar a taxa de falsos positivos (FDR) na identificação proteômica, a metodologia padrão de alvo-isca (target-decoy) consiste em:",
+      options: [
+        "Incluir no banco de busca sequências proteicas invertidas ou embaralhadas ('iscas') para estimar matematicamente as identificações ao acaso.",
+        "Utilizar anticorpos inespecíficos para capturar ruídos na câmara de ionização por Electrospray.",
+        "Submeter a amostra a um segundo ciclo de digestão tríptica com temperaturas crescentes.",
+        "Excluir da análise qualquer proteína que apresente menos de 100 proteoformas catalogadas."
+      ],
+      answer: 0,
+      explanation: "Ao incluir sequências embaralhadas/invertidas, sabe-se que qualquer match em uma isca é falso, permitindo calibrar o limiar estatístico para garantir, por exemplo, FDR de 1%[cite: 93]."
+    },
+    {
+      q: "Qual é o principal obstáculo analítico na análise proteômica do plasma sanguíneo humano?",
+      options: [
+        "A ampla faixa dinâmica de abundância (>10 ordens de grandeza), onde proteínas hiperabundantes (como albumina) mascaram biomarcadores de baixa concentração.",
+        "A impossibilidade física de clivar proteínas plasmáticas com enzimas proteolíticas convencionais.",
+        "A ausência total de proteoformas decorrentes de modificações pós-traducionais no sangue.",
+        "O fato de as imunoglobulinas precipitarem espontaneamente no interior da fonte de ESI."
+      ],
+      answer: 0,
+      explanation: "No plasma, a albumina e imunoglobulinas respondem por grande parte da massa proteica; as moléculas de interesse clínico estão muitas ordens de grandeza abaixo, exigindo fracionamento[cite: 72]."
+    },
+    {
+      q: "A identificação de sequências peptídicas por espectrometria de massas em tandem (MS/MS) com fragmentação por colisão fundamenta-se na geração de séries de íons específicas. Assinale a correta:",
+      options: [
+        "A clivagem da ligação peptídica gera séries de íons b (retendo a extremidade N-terminal) e íons y (retendo a extremidade C-terminal), cujos deltas de massa revelam resíduos individuais.",
+        "Os íons b preservam exclusivamente a extremidade carboxila terminal com carga líquida neutra.",
+        "A fragmentação rompe prioritariamente as pontes dissulfeto intracadeia, sem clivar a cadeia polipeptídica principal.",
+        "A diferença de m/z entre dois picos vizinhos da série y corresponde sempre à massa molecular exata do nucleotídeo correspondente."
+      ],
+      answer: 0,
+      explanation: "A fragmentação da ligação peptídica no ciclo de MS/MS produz fragmentos das séries b (quando a carga permanece na porção N-terminal) e y (quando permanece na porção C-terminal). A diferença entre picos consecutivos da mesma série corresponde à massa do aminoácido clivado[cite: 89, 90]."
+    },
+    {
+      q: "Entre as diferentes configurações de analisadores de massas, o analisador do tipo Orbitrap e o FTICR destacam-se na proteômica principalmente por:",
+      options: [
+        "Apresentarem altíssima exatidão de massa e altíssima resolução, reduzindo drasticamente o espaço de candidatos durante a busca em banco de dados.",
+        "Serem analisadores de baixa resolução que dependem exclusivamente de ionização por matriz sólida (MALDI).",
+        "Substituírem a necessidade de alto vácuo na separação mecânica dos íons gasosos.",
+        "Operarem exclusivamente em modo linear sem reter os íons em armadilhas de radiofrequência ou campos magnéticos."
+      ],
+      answer: 0,
+      explanation: "FTICR e Orbitrap oferecem altíssima resolução e exatidão (em ppm), o que estreita a margem de erro na identificação dos precursores e reduz falsos candidatos nas buscas contra bancos de sequências[cite: 82, 84]."
+    },
+    {
+      q: "Em relação ao tratamento de valores ausentes (missing values) em matrizes de dados quantitativos de proteômica por LC-MS/MS, assinale a conduta metodologicamente correta:",
+      options: [
+        "Valores faltantes devem ser universalmente substituídos por zero, pois indicam silenciamento gênico absoluto no nível transcricional.",
+        "A imputação cega de valores baixos fixos pode criar diferenças espúrias em proteínas que simplesmente estavam ligeiramente abaixo do limite de detecção instrumental daquela corrida.",
+        "Proteínas ausentes em uma réplica técnica devem ser eliminadas de todos os bancos públicos como UniProt e RefSeq.",
+        "A ausência de sinal no espectro MS1 confirma que a proteína sofreu clivagem irreversível por desacetilases de histonas."
+      ],
+      answer: 1,
+      explanation: "Diferente de contagens de RNA-seq, na proteômica por LC-MS um valor ausente pode significar ausência biológica real ou apenas que o peptídeo caiu abaixo do limite de detecção; imputar valores baixos sem critérios adequados fabrica falsos positivos[cite: 94]."
+    },
+    {
+      q: "Na proteômica quantitativa, o fenômeno de 'proteína moonlighting' representa uma complicação biológica porque:",
+      options: [
+        "A mesma cadeia polipeptídica pode exercer funções bioquímicas completamente distintas conforme o compartimento subcelular, parceiros de complexo ou estado de modificação.",
+        "A proteína degrada seu próprio mRNA citoplasmático por meio de uma atividade de nuclease intrínseca.",
+        "O transcrito primário é traduzido em ribossomos bacterianos durante infecções oportunistas.",
+        "A proteína perde permanentemente sua estrutura primária sem perder a conformação quaternária funcional."
+      ],
+      answer: 0,
+      explanation: "Moonlighting é a capacidade de um mesmo polipeptídeo desempenhar funções biológicas distintas dependendo de sua localização celular, ligantes ou interações proteicas (como exemplificado pelo papel clássico da GAPDH na glicólise e em transporte de membrana)[cite: 54, 55]."
+    },
+    {
+      q: "A estratégia proteômica top-down diferencia-se tecnicamente da abordagem bottom-up (shotgun) clássica por:",
+      options: [
+        "Analisar proteínas intactas sem digestão enzimática prévia, permitindo mapear combinações específicas de modificações pós-traducionais presentes na mesma proteoforma.",
+        "Exigir a digestão obrigatória por tripsina e quimotripsina em gel antes da entrada na fonte de ESI.",
+        "Apresentar rendimento e cobertura de proteoma muito superiores aos métodos de bottom-up em misturas teciduais complexas.",
+        "Prescindir de espectrômetros de massas de alta resolução como Orbitrap ou FTICR."
+      ],
+      answer: 0,
+      explanation: "O top-down analisa a proteína intacta sem clivagem proteolítica, preservando a ligação combinatória de todas as PTMs na mesma molécula, embora seja mais restrito em cobertura e exija instrumentos de resolução ultra-alta[cite: 71, 88]."
+    }
+  ],
+
+  sistemas: [
+    {
+      q: "Como se define o campo da Biologia de Sistemas?",
+      options: [
+        "O isolamento físico de genes individuais para caracterização cristalográfica independente.",
+        "O estudo das relações e interações entre os componentes biológicos e as propriedades que emergem do conjunto, com foco em hipóteses testáveis.",
+        "A substituição de ensaios laboratoriais empíricos por suposições teóricas sem necessidade de validação.",
+        "A contagem descritiva do número total de pares de bases presentes no genoma de diferentes espécies."
+      ],
+      answer: 1,
+      explanation: "Biologia de sistemas foca em descrever as relações entre os componentes e modelar propriedades emergentes, gerando hipóteses que devem ser testadas em ciclo iterativo[cite: 99, 108, 109]."
+    },
+    {
+      q: "Por que uma lista exaustiva de componentes (genes, transcritos, proteínas) não explica o funcionamento de uma célula?",
+      options: [
+        "Porque uma célula opera a partir de propriedades emergentes que dependem das interações entre as partes, e não apenas de sua presença estática.",
+        "Porque as listas de genomas sequenciados contêm uma taxa de erro de leitura superior a 50%.",
+        "Porque cada macromolécula atua de forma completamente isolada dentro do citoplasma.",
+        "Porque os componentes proteicos são destruídos instantaneamente após sua primeira reação catalítica."
+      ],
+      answer: 0,
+      explanation: "Assim como as peças de um avião desmontado não voam, o comportamento biológico surge do produto das interações entre os elementos (propriedades de Tipo II)[cite: 105, 106]."
+    },
+    {
+      q: "Em Biologia de Sistemas, uma propriedade emergente (Tipo II) caracteriza-se por:",
+      options: [
+        "Ser o resultado simples e previsível da soma das ações isoladas das suas partes (como a massa total do organismo).",
+        "Ser o produto das interações de rede, não sendo dedutível a partir da análise dos componentes individuais isolados.",
+        "Ocorrer exclusivamente em reações bioquímicas que não consomem nucleotídeos de trifosfato.",
+        "Manifestar-se apenas quando um gene essencial é completamente deletado do genoma."
+      ],
+      answer: 1,
+      explanation: "Propriedades Tipo II resultam da interação da rede (como o ritmo circadiano ou cooperatividade da hemoglobina) e não são dedutíveis da soma aditiva direta das partes isoladas[cite: 106]."
+    },
+    {
+      q: "Por que a deleção/nocaute de um gene frequentemente não produz um fenótipo perceptível sob condições padrão de laboratório?",
+      options: [
+        "Devido à robustez do sistema biológico, sustentada por redundância genética (parálogos) e vias metabólicas alternativas compensatórias.",
+        "Porque a maquinaria de reparo de DNA sintetiza imediatamente uma cópia idêntica do gene nocauteado.",
+        "Porque a maior parte dos genes anotados no genoma são sequências degeneradas sem transcrição celular.",
+        "Porque o silenciamento por CRISPR só atua em promotores desprovidos de ilhas CpG."
+      ],
+      answer: 0,
+      explanation: "Sistemas biológicos evoluíram mecanismos de robustez; o impacto do nocaute é absorvido por rotas alternativas, retroalimentação e redundância de isoenzimas ou parálogos[cite: 101, 102]."
+    },
+    {
+      q: "Qual é a diferença fundamental entre um sistema complicado e um sistema complexo?",
+      options: [
+        "O sistema complicado é decomponível e suas relações são fixas e previsíveis; o complexo exibe não linearidade, propriedades emergentes e dependência de contexto.",
+        "O sistema complexo possui poucas variáveis que podem ser facilmente resolvidas por meio de um manual estático de instruções.",
+        "Sistemas biológicos são exclusivamente complicados, enquanto motores de avião são sistemas puramente complexos.",
+        "Sistemas complicados nunca podem ser descritos ou representados pela teoria formal de grafos."
+      ],
+      answer: 0,
+      explanation: "Sistemas complicados possuem muitas peças com relações fixas e dedutíveis; sistemas complexos (como a célula) têm dinâmica não linear, adaptativa e dependente de contexto[cite: 107]."
+    },
+    {
+      q: "Em uma representação de rede biológica na forma de grafo, nós (vértices) e arestas (conectores) representam, respectivamente:",
+      options: [
+        "Entidades biológicas (genes, proteínas, metabólitos) e as relações/interações existentes entre elas.",
+        "Os reagentes químicos de uma extração e o tempo de corrida em gel de acrilamida.",
+        "Os níveis de absorbância óptica e a concentração final de primer na reação de RT-qPCR.",
+        "As colunas cromatográficas e as faixas de voltagem aplicadas na fonte de ionização."
+      ],
+      answer: 0,
+      explanation: "No formalismo de grafos, os nós representam entidades (genes, metabólitos, proteínas) e as arestas representam interações físicas, funcionais ou regulatórias entre elas[cite: 112]."
+    },
+    {
+      q: "Uma rede de interação física proteína-proteína (PPI) deve ser modelada conceitualmente como:",
+      options: [
+        "Não direcionada (não dirigida), pois a interação física de contato entre duas proteínas é simétrica.",
+        "Direcionada, porque uma proteína sempre consome a outra durante a ligação reversível.",
+        "Ponderada exclusivamente por coeficientes de absorção luminosa em 260 nm.",
+        "Hierárquica com arestas que apontam obrigatoriamente para o polo negativo do gel."
+      ],
+      answer: 0,
+      explanation: "O contato físico direto entre duas proteínas é bidirecional e simétrico; portanto, as arestas de uma rede PPI convencional são não direcionadas[cite: 113]."
+    },
+    {
+      q: "Redes regulatórias transcricionais (GRNs), nas quais fatores de transcrição regulam genes-alvo, exigem representação:",
+      options: [
+        "Direcionada, pois a regulação possui sentido claro (do regulador para o gene-alvo).",
+        "Não direcionada, pois a regulação é uma medida simétrica de associação física.",
+        "Ponderada apenas com números inteiros correspondentes ao tamanho do íntron.",
+        "Acrílica e restrita a promotores que não interagem com a RNA-polimerase II."
+      ],
+      answer: 0,
+      explanation: "A ação regulatória tem sentido e polaridade funcional bem definidos (o fator atua sobre a expressão do alvo), devendo ser modelada por arestas com setas direcionadas[cite: 113]."
+    },
+    {
+      q: "Em uma rede de coexpressão gênica ponderada, o peso numérico associado a cada aresta expressa:",
+      options: [
+        "O grau de correlação estatística entre o perfil de expressão de pares de genes ao longo das amostras.",
+        "A massa atômica combinada das cadeias polipeptídicas traduzidas.",
+        "A velocidade de polimerização de nucleotídeos durante o alongamento transcricional.",
+        "O número exato de fragmentos de clivagem gerados pela digestão tríptica."
+      ],
+      answer: 0,
+      explanation: "Em redes de coexpressão, a aresta indica a força estatística da correlação (peso) de expressão entre dois genes através das condições avaliadas[cite: 113, 133]."
+    },
+    {
+      q: "A métrica de grau (k) de um nó em um grafo corresponde a:",
+      options: [
+        "O número total de arestas conectadas a esse nó.",
+        "O tempo médio de retenção do nó na coluna cromatográfica.",
+        "A quantidade de modificações pós-traducionais que o nó recebe por minuto.",
+        "A razão matemática entre o número de éxons e o número de íntrons do gene."
+      ],
+      answer: 0,
+      explanation: "O grau (k) quantifica a conectividade direta de um elemento, correspondendo ao número de arestas que incidem sobre aquele nó específico[cite: 114]."
+    },
+    {
+      q: "O que caracteriza um nó denominado 'hub' em uma rede biológica?",
+      options: [
+        "Apresentar um grau de conectividade excepcionalmente alto em comparação com a maioria dos outros nós da rede.",
+        "Ser o único nó incapaz de formar complexos proteicos estáveis no citoplasma.",
+        "Localizar-se exclusivamente nas extremidades periféricas de um módulo funcional.",
+        "Possuir intermediacão nula e ausência completa de arestas incidentes."
+      ],
+      answer: 0,
+      explanation: "Hubs são nós altamente conectados (grau elevado) que funcionam como pontos centrais de articulação dentro da topologia de redes biológicas[cite: 114, 115]."
+    },
+    {
+      q: "O coeficiente de agrupamento (clustering coefficient) de um nó avalia:",
+      options: [
+        "A fração de vizinhos diretos daquele nó que também estão conectados entre si, indicando a tendência de formação de módulos ou complexos.",
+        "A velocidade com que a proteína correspondente é translocada para o núcleo celular.",
+        "A proporção de citosinas metiladas ao longo das ilhas CpG do promotor.",
+        "A frequência de eventos de exon skipping ocorridos no pré-mRNA maduro."
+      ],
+      answer: 0,
+      explanation: "O coeficiente de agrupamento mede a conectividade mútua entre os vizinhos de um nó, sendo um forte indicativo de modularidade e complexos funcionais[cite: 114]."
+    },
+    {
+      q: "Em Biologia de Sistemas, um 'módulo' representa:",
+      options: [
+        "Um subconjunto de nós densamente conectados entre si e com conexões mais esparsas com o restante da rede, muitas vezes correspondendo a vias ou complexos.",
+        "Uma sequência linear de genes que compartilham exatamente o mesmo sítio de poliadenilação.",
+        "Uma proteína isolada que não interage com nenhuma outra macromolécula celular.",
+        "Um fragmento peptídico que não sofre ionização na fonte de espectrometria de massas."
+      ],
+      answer: 0,
+      explanation: "Módulos são agrupamentos densamente conectados na rede que geralmente executam tarefas coordenadas, como vias metabólicas ou complexos multiproteicos[cite: 114, 115, 133]."
+    },
+    {
+      q: "A métrica de intermediação (betweenness centrality) de um nó quantifica:",
+      options: [
+        "O número de caminhos mínimos entre todos os pares de nós da rede que passam por aquele nó.",
+        "A distância euclidiana direta entre o ribossomo e o complexo de Golgi.",
+        "O número de resíduos de aminoácidos hidrofóbicos que compõem o núcleo da proteína.",
+        "A quantidade total de transcritos codificantes anotados na versão atual do GENCODE."
+      ],
+      answer: 0,
+      explanation: "A intermediação (betweenness) mede quantas rotas mínimas cruzam um dado nó; nós por onde passam muitos caminhos atuam como pontes estruturais na rede[cite: 114]."
+    },
+    {
+      q: "Um nó que possui baixo grau (poucas conexões locais), mas intermediação (betweenness) extremamente elevada, atua como:",
+      options: [
+        "Um gargalo (bottleneck), conectando diferentes módulos que de outro modo estariam isolados.",
+        "Um hub funcional dominante com dezenas de conexões diretas redundantes.",
+        "Um elemento biologicamente dispensável sem qualquer impacto na transmissão de sinais.",
+        "Uma proteína com baixo valor de ponto isoelétrico no gradiente de pH."
+      ],
+      answer: 0,
+      explanation: "Nós com betweenness alto e grau baixo conectam grandes módulos ou regiões da rede, servindo de gargalos pelos quais os fluxos de sinal obrigatoriamente passam[cite: 114, 133]."
+    },
+    {
+      q: "No estudo pioneiro de Jeong et al. (2001) sobre a rede de interação física em leveduras, observou-se que:",
+      options: [
+        "A deleção de nós com alto grau (hubs, k > 15) tem probabilidade aproximadamente três vezes maior de ser letal do que a de nós pouco conectados.",
+        "Proteínas com baixo grau são invariavelmente mais essenciais do que proteínas centrais.",
+        "A essencialidade gênica depende estritamente do peso molecular da proteína e não da topologia de rede.",
+        "Todos os genes de levedura são absolutamente essenciais para a sobrevivência em meio rico."
+      ],
+      answer: 0,
+      explanation: "O estudo demonstrou a relação entre topologia e função: a remoção de hubs (k > 15) foi letal em ~62% dos casos, contra apenas ~21% nos nós periféricos (k ≤ 5)[cite: 126]."
+    },
+    {
+      q: "No mapeamento da rede de interações entre as proteínas do vírus SARS-CoV-2 e o hospedeiro humano, a abordagem de sistemas permitiu:",
+      options: [
+        "Identificar 66 proteínas celulares humanas ligadas ao vírus passíveis de modulação por fármacos já conhecidos.",
+        "Sintetizar novos antibióticos direcionados exclusivamente contra o capsídeo do vírus.",
+        "Comprovar que o vírus se replica sem estabelecer contato físico com proteínas do hospedeiro.",
+        "Eliminar a necessidade de testar a atividade antiviral em linhagens celulares in vitro."
+      ],
+      answer: 0,
+      explanation: "Ao mapear as interações vírus-hospedeiro, a rede apontou proteínas humanas sequestradas pelo vírus que já eram alvos de compostos conhecidos (reposicionamento de fármacos)[cite: 128, 131]."
+    },
+    {
+      q: "Na análise de coexpressão gênica em amostras cerebrais de pacientes com doença de Alzheimer (Zhang et al., 2013), a modelagem bayesiana destacou:",
+      options: [
+        "O módulo imune/micróglia e o gene TYROBP como regulador-chave central associado aos traços neuropatológicos.",
+        "Genes da via glicolítica operando de forma totalmente independente de regulação transcricional.",
+        "A ausência de qualquer envolvimento de células da micróglia na patogênese da doença.",
+        "Que a mutação de GAPDH é a principal causadora das placas senis no córtex pré-frontal."
+      ],
+      answer: 0,
+      explanation: "A análise de rede destacou o módulo da micróglia como o mais correlacionado à patologia e colocou TYROBP no topo causal, o que foi validado experimentalmente[cite: 130, 131]."
+    },
+    {
+      q: "Uma aresta em uma rede de coexpressão gênica construída a partir de dados de RNA-seq indica:",
+      options: [
+        "Correlação estatística de expressão entre os genes, o que não prova interação física direta nem relação causal regulatória.",
+        "Que uma proteína obrigatoriamente se liga à outra formando um complexo heterodimérico estável.",
+        "Que o gene A transcreve o fator de transcrição responsável por fosforilar o gene B.",
+        "A direção exata da transferência de elétrons na membrana interna mitocondrial."
+      ],
+      answer: 0,
+      explanation: "Coexpressão indica correlação quantitativa de expressão; ela pode decorrer de regulação comum ou resposta ao mesmo estímulo, sem implicar contato físico ou causalidade direta[cite: 121]."
+    },
+    {
+      q: "Em Biologia de Sistemas, a premissa que distingue uma modelagem funcional legítima de uma representação descritiva é:",
+      options: [
+        "O ciclo iterativo, no qual hipóteses geradas pela rede são formalmente testadas e validadas por meio de experimentos dirigidos.",
+        "A obrigação de utilizar somente métodos baseados em géis de poliacrilamida bidimensionais.",
+        "O abandono total de análises estatísticas em favor de modelos estritamente determinísticos.",
+        "A premissa de que toda correlação encontrada em larga escala dispensa corroboração de bancada."
+      ],
+      answer: 0,
+      explanation: "O ciclo da Biologia de Sistemas é iterativo (medir → modelar → prever → testar); sem a etapa de teste experimental dirigida, o que se tem é uma imagem descritiva, e não um modelo validado[cite: 109, 131, 132]."
+    },
+    {
+      q: "Em redes biológicas, a medida de caminho mínimo médio (average shortest path length) reflete uma propriedade topológica fundamental do sistema, que é:",
+      options: [
+        "A quantidade total de aminoácidos polares expostos na superfície de todos os complexos quaternários da rede.",
+        "A rapidez potencial e eficiência com que um sinal biológico ou perturbação consegue se propagar entre dois nós arbitrários da rede.",
+        "O número absoluto de ciclos de retroalimentação negativa que controlam transcricionalmente a RNA-polimerase II.",
+        "A fração de arestas direcionadas que possuem pesos negativos na correlação de Pearson."
+      ],
+      answer: 1,
+      explanation: "O caminho mínimo médio quantifica a distância típica (número de conexões) necessária para transitar entre quaisquer dois nós da rede; valores baixos indicam alta rapidez de transmissão de sinal e propriedades de mundo pequeno[cite: 114, 117]."
+    },
+    {
+      q: "Na modelagem de redes regulatórias gênicas (GRNs) a partir de dados de expressão em larga escala, a inferência puramente computacional de correlação (ex.: GENIE3, ARACNE) apresenta como principal limitação:",
+      options: [
+        "A impossibilidade de gerar grafos ponderados a partir de matrizes numéricas.",
+        "A dificuldade intrínseca de distinguir regulação biológica funcional direta de meras correlações estatísticas ou respostas paralelas ao mesmo estímulo.",
+        "A exigência obrigatória de que todos os genes da rede possuam a anotação prévia de TATA box em seus promotores.",
+        "O fato de algoritmos de aprendizado de máquina exigirem amostras obtidas exclusivamente por 2D-PAGE."
+      ],
+      answer: 1,
+      explanation: "Modelar regulação a partir apenas de dados de expressão correlaciona genes que podem estar respondendo em paralelo ao mesmo estímulo sem que haja ação causal entre eles; provar a regulação exige experimentos de perturbação dirigida[cite: 121, 122]."
+    },
+    {
+      q: "A robustez topológica de uma rede biológica livre de escala (scale-free) manifesta-se de forma assimétrica frente a diferentes tipos de falha estrutural porque:",
+      options: [
+        "A rede é altamente sensível a mutações aleatórias em nós periféricos, mas extremamente tolerante ao nocaute de hubs centrais.",
+        "A rede tolera a perda estocástica da grande maioria de seus nós pouco conectados, mas entra em colapso se os seus poucos nós altamente conectados (hubs) forem alvos direcionados.",
+        "Todas as proteínas possuem rigorosamente o mesmo grau (k), distribuindo o impacto do nocaute de forma uniforme por todo o sistema.",
+        "A deleção de qualquer nó induz a duplicação imediata do coeficiente de agrupamento de todos os seus vizinhos."
+      ],
+      answer: 1,
+      explanation: "Por apresentar distribuição de conectividade heterogênea (poucos hubs e muitos nós periféricos), a rede absorve falhas aleatórias sem perder coesão, mas torna-se vulnerável a ataques dirigidos aos seus hubs funcionais[cite: 102, 114, 126]."
+    },
+    {
+      q: "Ao analisar bancos de anotação ontológica como a Gene Ontology (GO), a estrutura das relações entre termos e componentes celulares organiza-se formalmente como:",
+      options: [
+        "Um glossário plano de palavras-chave sem hierarquia semântica prévia.",
+        "Um grafo acíclico dirigido (DAG) com relações semânticas formais (como is_a e part_of), onde a anotação em um termo filho implica herança em todos os termos ancestrais.",
+        "Uma árvore filogenética simétrica baseada unicamente nas taxas de substituição de nucleotídeos de rDNA 16S.",
+        "Um circuito booleano de portas lógicas exclusivas onde cada gene pode ser mapeado em no máximo uma categoria funcional."
+      ],
+      answer: 1,
+      explanation: "A Gene Ontology é estruturada como um grafo acíclico dirigido (DAG); os termos são organizados hierarquicamente e herdam relações (is_a, part_of), o que gera forte redundância conceitual entre termos enriquecidos[cite: 124]."
+    },
+    {
+      q: "Na abordagem de biologia de sistemas conhecida como 'de baixo para cima' (bottom-up), a modelagem matemática distingue-se da abordagem 'de cima para baixo' (top-down) por:",
+      options: [
+        "Partir de dados ômicos globais sem hipótese prévia para inferir módulos funcionais e redes de coexpressão não supervisionadas.",
+        "Construir modelos matemáticos dinâmicos a partir de circuitos pequenos e bem caracterizados bioquimicamente, utilizando parâmetros cinéticos medidos experimentalmente.",
+        "Recusar o uso de simulações computacionais, operando exclusivamente por observação em microscopia de fluorescência.",
+        "Aplicar filtros de FDR de 1% diretamente sobre espectros teóricos de fragmentação peptídica."
+      ],
+      answer: 1,
+      explanation: "A modelagem bottom-up foca no mecanismo bioquímico detalhado de circuitos menores com parâmetros cinéticos medidos para prever dinâmica temporal, enquanto o top-down explora dados ômicos de larga escala para descoberta de candidatos em redes globais[cite: 110]."
+    }
+  ]
+};
 
     /* ==========================================================================
        4. LÓGICA DO JOGO: EMBARALHAMENTO, TIMER E CONQUISTAS
